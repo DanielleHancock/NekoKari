@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NekoKari/ViewController.swift"
+            timestampString = "479848669.673715"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "signUpDidTouch(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NekoKari/AdminAddCatTableViewController.swift"
+            timestampString = "479962295.946904"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NekoKari/AdminAddCatTableViewController.swift"
+            timestampString = "479961719.742535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "AdminAddCatTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NekoKari.AdminAddCatTableViewController.__deallocating_deinit"
+                  moduleName = "NekoKari"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunlisha/Github/NekoKari/NekoKari/NekoKari/AdminAddCatTableViewController.swift"
+                  timestampString = "479961719.761457"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NekoKari.AdminAddCatTableViewController.init (NekoKari.AdminAddCatTableViewController.Type)(style : __C.UITableViewStyle) -&gt; NekoKari.AdminAddCatTableViewController"
+                  moduleName = "NekoKari"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunlisha/Github/NekoKari/NekoKari/NekoKari/AdminAddCatTableViewController.swift"
+                  timestampString = "479961719.761819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "38">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NekoKari.AdminAddCatTableViewController.init (NekoKari.AdminAddCatTableViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; NekoKari.AdminAddCatTableViewController"
+                  moduleName = "NekoKari"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunlisha/Github/NekoKari/NekoKari/NekoKari/AdminAddCatTableViewController.swift"
+                  timestampString = "479961719.76208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "81">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NekoKari.AdminAddCatTableViewController.init (NekoKari.AdminAddCatTableViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;NekoKari.AdminAddCatTableViewController&gt;"
+                  moduleName = "NekoKari"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sunlisha/Github/NekoKari/NekoKari/NekoKari/AdminAddCatTableViewController.swift"
+                  timestampString = "479961719.762334"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
