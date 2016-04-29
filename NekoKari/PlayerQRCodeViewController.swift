@@ -116,6 +116,11 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
             
             if metadataObj.stringValue != nil {
                // messageLabel.text = "Dectected"
+                if metadataObj.stringValue == "Snowball" {
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+
+                }
+                
             }
         }
     }

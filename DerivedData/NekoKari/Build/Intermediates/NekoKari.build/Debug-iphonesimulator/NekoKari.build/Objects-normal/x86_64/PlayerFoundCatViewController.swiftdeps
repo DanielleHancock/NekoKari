@@ -9,10 +9,10 @@ provides-dynamic-lookup:
 - "findMoreCatsButtonDidTouch"
 - "catBookButtonDidTouch"
 depends-top-level:
-- !private "StringLiteralType"
 - "PlayerFoundCatViewController"
-- "UIViewController"
+- !private "StringLiteralType"
 - "AnyObject"
+- "UIViewController"
 depends-member:
 - ["PSs9AnyObject", "catBookButtonDidTouch"]
 - ["PSs9AnyObject", "findMoreCatsButtonDidTouch"]

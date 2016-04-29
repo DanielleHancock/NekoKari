@@ -127,6 +127,9 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
             
         }
         
+        lookingForCatLat = catLatitude[0]
+        lookingForCatLong = catLongitude[0]
+        
         //On loading the screen the map kit view is shown and the current location is found and is being updated.
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -173,8 +176,7 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         self.longitude = newLocation.coordinate.longitude
         //print(String(self.latitude))
         //print (String(abs(self.latitude - catLatitude)))
-        lookingForCatLat = catLatitude[0]
-        lookingForCatLong = catLongitude[0]
+        
         //print(String(lookingForCatLong))
         for i in 0...3 {
             if (self.latitude - lookingForCatLat < self.latitude - catLatitude[i+1]) {
