@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C8NekoKari11AppDelegate", ""]
 provides-dynamic-lookup:
-- "window"
 - "applicationWillResignActive"
-- "applicationDidEnterBackground"
-- "applicationDidBecomeActive"
-- "applicationWillTerminate"
-- "applicationWillEnterForeground"
 - "application"
+- "applicationWillTerminate"
+- "applicationDidBecomeActive"
+- "window"
+- "applicationWillEnterForeground"
+- "applicationDidEnterBackground"
 depends-top-level:
 - "NSObject"
-- "UIApplicationDelegate"
+- "UIWindow"
 - "AnyObject"
-- "Bool"
 - "UIApplication"
 - "UIResponder"
-- "AppDelegate"
+- "UIApplicationDelegate"
 - !private "BooleanLiteralType"
-- "UIWindow"
+- "Bool"
+- "AppDelegate"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]
@@ -222,4 +222,7 @@ depends-external:
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 interface-hash: "eb6deb7e97b205db2b1f8c4c6c87743c"

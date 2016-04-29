@@ -11,9 +11,8 @@ import Firebase
 
 class PlayerCatBookViewController: UIViewController {
     
-    let userid = "efa6bda0-026a-466e-bdf8-d70f91ab5ac0"
     let ref = Firebase(url: "https://nekokari.firebaseio.com")
-
+    var userid = ""
    
     @IBOutlet weak var SnowballPic: UIImageView!
     @IBOutlet weak var SnowballText: UITextView!
@@ -27,9 +26,22 @@ class PlayerCatBookViewController: UIViewController {
     @IBOutlet weak var SunnyText: UITextView!
     
     override func viewDidLoad() {
-        self.SnowballPic.image=UIImage(named: "Snowball")
         
-        ref.childByAppendingPath("users").childByAppendingPath(userid).childByAppendingPath("Snowball").observeEventType(.Value, withBlock: { snapshot in
+        ref.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                // user authenticated
+                self.userid = authData.uid
+                print("uid" + self.userid)
+            } else {
+                // No user is signed in
+            }
+        })
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        print("uid" + self.userid)
+        ref.childByAppendingPath("users").childByAppendingPath(self.userid).childByAppendingPath("Snowball").observeEventType(.Value, withBlock: { snapshot in
             if let value:Bool = snapshot.value as? Bool {
                 if value {
                     self.SnowballPic.image=UIImage(named: "Snowball")
@@ -38,10 +50,10 @@ class PlayerCatBookViewController: UIViewController {
             }
             }, withCancelBlock: { error in
                 print(error.description)
-            })
+        })
         
         
-        ref.childByAppendingPath("users").childByAppendingPath(userid).childByAppendingPath("Smokey").observeEventType(.Value, withBlock: { snapshot in
+        ref.childByAppendingPath("users").childByAppendingPath(self.userid).childByAppendingPath("Smokey").observeEventType(.Value, withBlock: { snapshot in
             if let value:Bool = snapshot.value as? Bool {
                 if value {
                     self.SmokeyPic.image=UIImage(named: "Smokey")
@@ -52,7 +64,7 @@ class PlayerCatBookViewController: UIViewController {
                 print(error.description)
         })
         
-        ref.childByAppendingPath("users").childByAppendingPath(userid).childByAppendingPath("Shadow").observeEventType(.Value, withBlock: { snapshot in
+        ref.childByAppendingPath("users").childByAppendingPath(self.userid).childByAppendingPath("Shadow").observeEventType(.Value, withBlock: { snapshot in
             if let value:Bool = snapshot.value as? Bool {
                 if value {
                     self.ShadowPic.image=UIImage(named: "Shadow")
@@ -63,7 +75,7 @@ class PlayerCatBookViewController: UIViewController {
                 print(error.description)
         })
         
-        ref.childByAppendingPath("users").childByAppendingPath(userid).childByAppendingPath("Spots").observeEventType(.Value, withBlock: { snapshot in
+        ref.childByAppendingPath("users").childByAppendingPath(self.userid).childByAppendingPath("Spots").observeEventType(.Value, withBlock: { snapshot in
             if let value:Bool = snapshot.value as? Bool {
                 if value {
                     self.SpotsPic.image=UIImage(named: "Spots")
@@ -74,7 +86,7 @@ class PlayerCatBookViewController: UIViewController {
                 print(error.description)
         })
         
-        ref.childByAppendingPath("users").childByAppendingPath(userid).childByAppendingPath("Sunny").observeEventType(.Value, withBlock: { snapshot in
+        ref.childByAppendingPath("users").childByAppendingPath(self.userid).childByAppendingPath("Sunny").observeEventType(.Value, withBlock: { snapshot in
             if let value:Bool = snapshot.value as? Bool {
                 if value {
                     self.SunnyPic.image=UIImage(named: "Sunny")
@@ -83,7 +95,12 @@ class PlayerCatBookViewController: UIViewController {
             }
             }, withCancelBlock: { error in
                 print(error.description)
-        })    }
-    
+        })
+    }
+
+
+
+
+        
     
 }

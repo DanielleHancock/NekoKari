@@ -179,10 +179,25 @@ SWIFT_CLASS("_TtC8NekoKari19LogInViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImageView;
+@class UITextView;
 
 SWIFT_CLASS("_TtC8NekoKari27PlayerCatBookViewController")
 @interface PlayerCatBookViewController : UIViewController
-- (IBAction)backToFindCatScreenDidTouch:(id __nonnull)sender;
+@property (nonatomic, readonly, strong) Firebase * __null_unspecified ref;
+@property (nonatomic, copy) NSString * __nonnull userid;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified SnowballPic;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified SnowballText;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified SmokeyPic;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified SmokeyText;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified ShadowPic;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified ShadowText;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified SpotsPic;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified SpotsText;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified SunnyPic;
+@property (nonatomic, weak) IBOutlet UITextView * __null_unspecified SunnyText;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -205,7 +220,7 @@ SWIFT_CLASS("_TtC8NekoKari26PlayerQRCodeViewController")
 @interface PlayerQRCodeViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 - (IBAction)qrButtonDidTouch:(id __nonnull)sender;
 - (IBAction)backToFindCatPageDidTouch:(id __nonnull)sender;
-@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified messageLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified cameraViewBounds;
 @property (nonatomic, strong) AVCaptureSession * __nullable captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer * __nullable videoPreviewLayer;
 @property (nonatomic, strong) UIView * __nullable qrCodeFrameView;
@@ -217,10 +232,11 @@ SWIFT_CLASS("_TtC8NekoKari26PlayerQRCodeViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIImageView;
 
 SWIFT_CLASS("_TtC8NekoKari20PlayerViewController")
 @interface PlayerViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@property (nonatomic, readonly, copy) NSString * __nonnull admin;
+@property (nonatomic, readonly, strong) Firebase * __null_unspecified ref;
 - (IBAction)logOutDidTouch:(id __nonnull)sender;
 - (IBAction)catBookButtonDidTouch:(id __nonnull)sender;
 - (IBAction)foundCatButtonDidTouch:(id __nonnull)sender;
@@ -233,8 +249,8 @@ SWIFT_CLASS("_TtC8NekoKari20PlayerViewController")
 @property (nonatomic, strong) CLLocation * __null_unspecified previousLocation;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
-@property (nonatomic) double catLatitude;
-@property (nonatomic) double catLongitude;
+@property (nonatomic, copy) NSArray<NSNumber *> * __nonnull catLatitude;
+@property (nonatomic, copy) NSArray<NSNumber *> * __nonnull catLongitude;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)viewWillAppear:(BOOL)animated;

@@ -6,13 +6,13 @@ provides-nominal:
 provides-member:
 - ["C8NekoKari28PlayerFoundCatViewController", ""]
 provides-dynamic-lookup:
-- "catBookButtonDidTouch"
 - "findMoreCatsButtonDidTouch"
+- "catBookButtonDidTouch"
 depends-top-level:
 - !private "StringLiteralType"
 - "PlayerFoundCatViewController"
-- "AnyObject"
 - "UIViewController"
+- "AnyObject"
 depends-member:
 - ["PSs9AnyObject", "catBookButtonDidTouch"]
 - ["PSs9AnyObject", "findMoreCatsButtonDidTouch"]
@@ -143,4 +143,7 @@ depends-external:
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 interface-hash: "0cc903a15b85f229fb88e418e4a84498"

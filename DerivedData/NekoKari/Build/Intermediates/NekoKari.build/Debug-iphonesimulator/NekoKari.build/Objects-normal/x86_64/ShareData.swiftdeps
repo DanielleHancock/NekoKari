@@ -7,13 +7,13 @@ provides-member:
 - ["C8NekoKari9ShareData", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "dispatch_once"
+- "AnyObject"
 - !private "dispatch_once_t"
 - "ShareData"
-- "FloatLiteralType"
-- !private "dispatch_once"
 - "IntegerLiteralType"
+- "FloatLiteralType"
 - "String"
-- "AnyObject"
 - "Bool"
 depends-member:
 - !private ["PSs9AnyObject", "ShareData"]
@@ -61,4 +61,7 @@ depends-external:
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/FAuthData.h"
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Headers/Firebase-umbrella.h"
 - "/Users/sunlisha/Desktop/NekoKari/DerivedData/NekoKari/Build/Products/Debug-iphonesimulator/Firebase.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
 interface-hash: "1e69c5b541af45e8018c0391de6ed5f8"
