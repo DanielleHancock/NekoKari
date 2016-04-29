@@ -6,59 +6,66 @@ provides-nominal:
 provides-member:
 - ["C8NekoKari20PlayerViewController", ""]
 provides-dynamic-lookup:
-- "latitude"
-- "viewDidLoad"
-- "red"
+- "userid"
 - "foundCatButtonDidTouch"
-- "ref"
-- "viewWillAppear"
-- "blue"
 - "catLongitude"
-- "previousLocation"
-- "catLatitude"
-- "logOutDidTouch"
-- "viewWillDisappear"
-- "colorSignal"
 - "catBookButtonDidTouch"
-- "signal"
+- "lookingForCatLong"
+- "logOutButtonDidTouch"
+- "admin"
+- "viewWillDisappear"
+- "viewWillAppear"
+- "red"
+- "catLatitude"
 - "locationManager"
 - "locationManager"
 - "longitude"
-- "admin"
-- "green"
+- "ref"
+- "colorSignal"
 - "didReceiveMemoryWarning"
+- "blue"
+- "latitude"
+- "lookingForCatLat"
+- "viewDidLoad"
+- "signal"
+- "previousLocation"
+- "green"
+- "viewDidAppear"
 depends-top-level:
+- "UIViewController"
 - "StringLiteralType"
-- "PlayerViewController"
-- !private "..."
+- "UILabel"
+- "Double"
+- "UIImageView"
 - "CGFloat"
-- "Firebase"
-- !private "String"
-- !private "<="
-- "CLLocation"
-- "/"
-- !private "=="
-- !private "||"
-- "UnicodeScalarType"
+- "CLLocationManager"
 - "MKMapViewDelegate"
-- !private "print"
+- !private "-"
 - !private "+"
 - "CLLocationManagerDelegate"
-- "ExtendedGraphemeClusterType"
+- !private "<"
 - !private "kCLLocationAccuracyBest"
-- "UIViewController"
-- "Double"
-- !private "abs"
-- !private "-"
-- "CLLocationManager"
-- "AnyObject"
-- "UIImageView"
+- !private "String"
 - "Bool"
+- "/"
+- "ExtendedGraphemeClusterType"
+- !private "print"
+- !private "=="
+- !private "..."
+- !private "<="
 - !private "UIColor"
-- "UILabel"
+- "Firebase"
+- "AnyObject"
+- "PlayerViewController"
+- "UnicodeScalarType"
+- !private "||"
+- !private "!="
+- "CLLocation"
+- !private "abs"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["PSs16AbsoluteValuable", "Stride"]
+- !private ["PSs16AbsoluteValuable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["CSs12AnyGenerator", "Element"]
 - !private ["PSs9AnyObject", "CLLocationManager"]
@@ -94,8 +101,10 @@ depends-member:
 - ["PSs9AnyObject", "locationManagerDidPauseLocationUpdates"]
 - ["PSs9AnyObject", "locationManagerDidResumeLocationUpdates"]
 - ["PSs9AnyObject", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSs9AnyObject", "logOutDidTouch"]
+- ["PSs9AnyObject", "logOutButtonDidTouch"]
 - ["PSs9AnyObject", "longitude"]
+- ["PSs9AnyObject", "lookingForCatLat"]
+- ["PSs9AnyObject", "lookingForCatLong"]
 - ["PSs9AnyObject", "mapView"]
 - ["PSs9AnyObject", "mapViewDidFailLoadingMap"]
 - ["PSs9AnyObject", "mapViewDidFinishLoadingMap"]
@@ -104,6 +113,7 @@ depends-member:
 - ["PSs9AnyObject", "mapViewWillStartLoadingMap"]
 - ["PSs9AnyObject", "mapViewWillStartLocatingUser"]
 - ["PSs9AnyObject", "mapViewWillStartRenderingMap"]
+- !private ["PSs9AnyObject", "observeAuthEventWithBlock"]
 - !private ["PSs9AnyObject", "observeEventType"]
 - !private ["PSs9AnyObject", "performSegueWithIdentifier"]
 - ["PSs9AnyObject", "previousLocation"]
@@ -118,7 +128,10 @@ depends-member:
 - !private ["PSs9AnyObject", "stopUpdatingHeading"]
 - !private ["PSs9AnyObject", "stopUpdatingLocation"]
 - !private ["PSs9AnyObject", "text"]
+- !private ["PSs9AnyObject", "uid"]
+- ["PSs9AnyObject", "userid"]
 - !private ["PSs9AnyObject", "value"]
+- ["PSs9AnyObject", "viewDidAppear"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", "viewWillAppear"]
 - ["PSs9AnyObject", "viewWillDisappear"]
@@ -137,6 +150,8 @@ depends-member:
 - !private ["Sa", "subscript"]
 - !private ["PSs23ArrayLiteralConvertible", "Generator"]
 - !private ["PSs23ArrayLiteralConvertible", "Index"]
+- !private ["PSs23ArrayLiteralConvertible", "IntegerLiteralType"]
+- !private ["PSs23ArrayLiteralConvertible", "Stride"]
 - !private ["PSs23ArrayLiteralConvertible", "SubSequence"]
 - !private ["PSs23ArrayLiteralConvertible", "_Element"]
 - !private ["PSs23ArrayLiteralConvertible", "append"]
@@ -146,12 +161,20 @@ depends-member:
 - !private ["PSs23ArrayLiteralConvertible", "subscript"]
 - !private ["VSs10ArraySlice", "Generator"]
 - !private ["VSs10ArraySlice", "Index"]
+- !private ["VSs10ArraySlice", "IntegerLiteralType"]
+- !private ["VSs10ArraySlice", "Stride"]
+- !private ["VSs10ArraySlice", "deinit"]
 - !private ["PSs22BidirectionalIndexType", "Distance"]
 - !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
+- !private ["PSs22BidirectionalIndexType", "Stride"]
 - !private ["PSs22BidirectionalIndexType", "_DisabledRangeIndex"]
+- !private ["PSs22BidirectionalIndexType", "_DisallowMixedSignArithmetic"]
+- !private ["OSs3Bit", "deinit"]
 - !private ["PSs21BitwiseOperationsType", "Distance"]
 - !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["PSs21BitwiseOperationsType", "Stride"]
 - !private ["PSs21BitwiseOperationsType", "_DisabledRangeIndex"]
+- !private ["PSs21BitwiseOperationsType", "_DisallowMixedSignArithmetic"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
@@ -191,6 +214,8 @@ depends-member:
 - ["PSo25CLLocationManagerDelegate", "locationManagerDidResumeLocationUpdates"]
 - ["PSo25CLLocationManagerDelegate", "locationManagerShouldDisplayHeadingCalibration"]
 - !private ["PSo25CLLocationManagerDelegate", "longitude"]
+- !private ["PSo25CLLocationManagerDelegate", "lookingForCatLat"]
+- !private ["PSo25CLLocationManagerDelegate", "lookingForCatLong"]
 - ["PSo25CLLocationManagerDelegate", "mapView"]
 - ["PSo25CLLocationManagerDelegate", "mapViewDidFailLoadingMap"]
 - ["PSo25CLLocationManagerDelegate", "mapViewDidFinishLoadingMap"]
@@ -203,6 +228,7 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "print"]
 - !private ["PSo25CLLocationManagerDelegate", "ref"]
 - !private ["PSo25CLLocationManagerDelegate", "signal"]
+- !private ["PSo25CLLocationManagerDelegate", "userid"]
 - ["PSo25CLLocationManagerDelegate", ""]
 - !private ["PSs11CVarArgType", "CLLocationManager"]
 - !private ["PSs11CVarArgType", "Distance"]
@@ -213,6 +239,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "String"]
 - !private ["PSs11CVarArgType", "UIColor"]
 - !private ["PSs11CVarArgType", "_DisabledRangeIndex"]
+- !private ["PSs11CVarArgType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs11CVarArgType", "abs"]
 - ["PSs11CVarArgType", "admin"]
 - !private ["PSs11CVarArgType", "authorizationStatus"]
@@ -239,8 +266,10 @@ depends-member:
 - ["PSs11CVarArgType", "locationManagerDidPauseLocationUpdates"]
 - ["PSs11CVarArgType", "locationManagerDidResumeLocationUpdates"]
 - ["PSs11CVarArgType", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSs11CVarArgType", "logOutDidTouch"]
+- ["PSs11CVarArgType", "logOutButtonDidTouch"]
 - ["PSs11CVarArgType", "longitude"]
+- ["PSs11CVarArgType", "lookingForCatLat"]
+- ["PSs11CVarArgType", "lookingForCatLong"]
 - ["PSs11CVarArgType", "mapView"]
 - ["PSs11CVarArgType", "mapViewDidFailLoadingMap"]
 - ["PSs11CVarArgType", "mapViewDidFinishLoadingMap"]
@@ -249,6 +278,7 @@ depends-member:
 - ["PSs11CVarArgType", "mapViewWillStartLoadingMap"]
 - ["PSs11CVarArgType", "mapViewWillStartLocatingUser"]
 - ["PSs11CVarArgType", "mapViewWillStartRenderingMap"]
+- !private ["PSs11CVarArgType", "observeAuthEventWithBlock"]
 - !private ["PSs11CVarArgType", "performSegueWithIdentifier"]
 - ["PSs11CVarArgType", "previousLocation"]
 - !private ["PSs11CVarArgType", "print"]
@@ -262,7 +292,10 @@ depends-member:
 - !private ["PSs11CVarArgType", "stopUpdatingHeading"]
 - !private ["PSs11CVarArgType", "stopUpdatingLocation"]
 - !private ["PSs11CVarArgType", "text"]
+- !private ["PSs11CVarArgType", "uid"]
+- ["PSs11CVarArgType", "userid"]
 - !private ["PSs11CVarArgType", "value"]
+- ["PSs11CVarArgType", "viewDidAppear"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", "viewWillAppear"]
 - ["PSs11CVarArgType", "viewWillDisappear"]
@@ -277,6 +310,8 @@ depends-member:
 - !private ["VSs14ClosedInterval", "deinit"]
 - !private ["PSs14CollectionType", "Generator"]
 - !private ["PSs14CollectionType", "Index"]
+- !private ["PSs14CollectionType", "IntegerLiteralType"]
+- !private ["PSs14CollectionType", "Stride"]
 - !private ["PSs14CollectionType", "SubSequence"]
 - !private ["PSs14CollectionType", "_Element"]
 - !private ["PSs14CollectionType", "append"]
@@ -290,11 +325,14 @@ depends-member:
 - !private ["PSs10Comparable", "IntegerLiteralType"]
 - !private ["PSs10Comparable", "Stride"]
 - !private ["PSs10Comparable", "_DisabledRangeIndex"]
+- !private ["PSs10Comparable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs10Comparable", "characters"]
 - !private ["PSs10Comparable", "init"]
 - !private ["PSs28CustomDebugStringConvertible", "Generator"]
 - !private ["PSs28CustomDebugStringConvertible", "Index"]
+- !private ["PSs28CustomDebugStringConvertible", "IntegerLiteralType"]
 - !private ["PSs28CustomDebugStringConvertible", "Some"]
+- !private ["PSs28CustomDebugStringConvertible", "Stride"]
 - !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
 - !private ["PSs28CustomDebugStringConvertible", "_Element"]
 - !private ["PSs28CustomDebugStringConvertible", "append"]
@@ -316,6 +354,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
 - !private ["PSs23CustomStringConvertible", "UIColor"]
 - !private ["PSs23CustomStringConvertible", "_DisabledRangeIndex"]
+- !private ["PSs23CustomStringConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["PSs23CustomStringConvertible", "_Element"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs23CustomStringConvertible", "abs"]
@@ -347,8 +386,10 @@ depends-member:
 - ["PSs23CustomStringConvertible", "locationManagerDidPauseLocationUpdates"]
 - ["PSs23CustomStringConvertible", "locationManagerDidResumeLocationUpdates"]
 - ["PSs23CustomStringConvertible", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSs23CustomStringConvertible", "logOutDidTouch"]
+- ["PSs23CustomStringConvertible", "logOutButtonDidTouch"]
 - ["PSs23CustomStringConvertible", "longitude"]
+- ["PSs23CustomStringConvertible", "lookingForCatLat"]
+- ["PSs23CustomStringConvertible", "lookingForCatLong"]
 - !private ["PSs23CustomStringConvertible", "map"]
 - ["PSs23CustomStringConvertible", "mapView"]
 - ["PSs23CustomStringConvertible", "mapViewDidFailLoadingMap"]
@@ -358,6 +399,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "mapViewWillStartLoadingMap"]
 - ["PSs23CustomStringConvertible", "mapViewWillStartLocatingUser"]
 - ["PSs23CustomStringConvertible", "mapViewWillStartRenderingMap"]
+- !private ["PSs23CustomStringConvertible", "observeAuthEventWithBlock"]
 - !private ["PSs23CustomStringConvertible", "performSegueWithIdentifier"]
 - ["PSs23CustomStringConvertible", "previousLocation"]
 - !private ["PSs23CustomStringConvertible", "print"]
@@ -372,13 +414,18 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "stopUpdatingLocation"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - !private ["PSs23CustomStringConvertible", "text"]
+- !private ["PSs23CustomStringConvertible", "uid"]
+- ["PSs23CustomStringConvertible", "userid"]
 - !private ["PSs23CustomStringConvertible", "value"]
+- ["PSs23CustomStringConvertible", "viewDidAppear"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", "viewWillAppear"]
 - ["PSs23CustomStringConvertible", "viewWillDisappear"]
 - ["PSs23CustomStringConvertible", ""]
+- !private ["VSs15DictionaryIndex", "deinit"]
 - !private ["Sd", "IntegerLiteralType"]
 - !private ["Sd", "Stride"]
+- !private ["Sd", "_DisallowMixedSignArithmetic"]
 - !private ["Sd", "deinit"]
 - !private ["Sd", "init"]
 - !private ["PSs9Equatable", "AuthorizedWhenInUse"]
@@ -396,6 +443,7 @@ depends-member:
 - !private ["PSs9Equatable", "UIColor"]
 - !private ["PSs9Equatable", "Value"]
 - !private ["PSs9Equatable", "_DisabledRangeIndex"]
+- !private ["PSs9Equatable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - !private ["PSs9Equatable", "abs"]
 - ["PSs9Equatable", "admin"]
@@ -424,8 +472,10 @@ depends-member:
 - ["PSs9Equatable", "locationManagerDidPauseLocationUpdates"]
 - ["PSs9Equatable", "locationManagerDidResumeLocationUpdates"]
 - ["PSs9Equatable", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSs9Equatable", "logOutDidTouch"]
+- ["PSs9Equatable", "logOutButtonDidTouch"]
 - ["PSs9Equatable", "longitude"]
+- ["PSs9Equatable", "lookingForCatLat"]
+- ["PSs9Equatable", "lookingForCatLong"]
 - ["PSs9Equatable", "mapView"]
 - ["PSs9Equatable", "mapViewDidFailLoadingMap"]
 - ["PSs9Equatable", "mapViewDidFinishLoadingMap"]
@@ -434,6 +484,7 @@ depends-member:
 - ["PSs9Equatable", "mapViewWillStartLoadingMap"]
 - ["PSs9Equatable", "mapViewWillStartLocatingUser"]
 - ["PSs9Equatable", "mapViewWillStartRenderingMap"]
+- !private ["PSs9Equatable", "observeAuthEventWithBlock"]
 - !private ["PSs9Equatable", "performSegueWithIdentifier"]
 - ["PSs9Equatable", "previousLocation"]
 - !private ["PSs9Equatable", "print"]
@@ -447,7 +498,10 @@ depends-member:
 - !private ["PSs9Equatable", "stopUpdatingHeading"]
 - !private ["PSs9Equatable", "stopUpdatingLocation"]
 - !private ["PSs9Equatable", "text"]
+- !private ["PSs9Equatable", "uid"]
+- ["PSs9Equatable", "userid"]
 - !private ["PSs9Equatable", "value"]
+- ["PSs9Equatable", "viewDidAppear"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", "viewWillAppear"]
 - ["PSs9Equatable", "viewWillDisappear"]
@@ -455,22 +509,31 @@ depends-member:
 - !private ["PSs9ErrorType", "description"]
 - !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "characters"]
 - !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["CSo9FAuthData", "deinit"]
+- !private ["CSo9FAuthData", "uid"]
 - !private ["CSo13FDataSnapshot", "value"]
 - !private ["OSC10FEventType", "Value"]
 - !private ["CSo6FQuery", "childByAppendingPath"]
 - ["CSo6FQuery", "init"]
+- !private ["CSo6FQuery", "observeAuthEventWithBlock"]
 - !private ["CSo8Firebase", "childByAppendingPath"]
 - ["CSo8Firebase", "init"]
+- !private ["CSo8Firebase", "observeAuthEventWithBlock"]
 - !private ["VSs7Float80", "IntegerLiteralType"]
+- !private ["VSs7Float80", "deinit"]
 - !private ["PSs23FloatLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs23FloatLiteralConvertible", "Stride"]
+- !private ["PSs23FloatLiteralConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["PSs23FloatLiteralConvertible", "init"]
 - !private ["PSs17FloatingPointType", "IntegerLiteralType"]
 - !private ["PSs17FloatingPointType", "Stride"]
+- !private ["PSs17FloatingPointType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs17FloatingPointType", "init"]
 - !private ["PSs16ForwardIndexType", "Distance"]
 - !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
+- !private ["PSs16ForwardIndexType", "Stride"]
 - !private ["PSs16ForwardIndexType", "_DisabledRangeIndex"]
+- !private ["PSs16ForwardIndexType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs13GeneratorType", "Element"]
 - !private ["PSs8Hashable", "AuthorizedWhenInUse"]
 - !private ["PSs8Hashable", "CLLocationManager"]
@@ -486,6 +549,7 @@ depends-member:
 - !private ["PSs8Hashable", "UIColor"]
 - !private ["PSs8Hashable", "Value"]
 - !private ["PSs8Hashable", "_DisabledRangeIndex"]
+- !private ["PSs8Hashable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - !private ["PSs8Hashable", "abs"]
 - ["PSs8Hashable", "admin"]
@@ -513,8 +577,10 @@ depends-member:
 - ["PSs8Hashable", "locationManagerDidPauseLocationUpdates"]
 - ["PSs8Hashable", "locationManagerDidResumeLocationUpdates"]
 - ["PSs8Hashable", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSs8Hashable", "logOutDidTouch"]
+- ["PSs8Hashable", "logOutButtonDidTouch"]
 - ["PSs8Hashable", "longitude"]
+- ["PSs8Hashable", "lookingForCatLat"]
+- ["PSs8Hashable", "lookingForCatLong"]
 - ["PSs8Hashable", "mapView"]
 - ["PSs8Hashable", "mapViewDidFailLoadingMap"]
 - ["PSs8Hashable", "mapViewDidFinishLoadingMap"]
@@ -523,6 +589,7 @@ depends-member:
 - ["PSs8Hashable", "mapViewWillStartLoadingMap"]
 - ["PSs8Hashable", "mapViewWillStartLocatingUser"]
 - ["PSs8Hashable", "mapViewWillStartRenderingMap"]
+- !private ["PSs8Hashable", "observeAuthEventWithBlock"]
 - !private ["PSs8Hashable", "performSegueWithIdentifier"]
 - ["PSs8Hashable", "previousLocation"]
 - !private ["PSs8Hashable", "print"]
@@ -536,15 +603,23 @@ depends-member:
 - !private ["PSs8Hashable", "stopUpdatingHeading"]
 - !private ["PSs8Hashable", "stopUpdatingLocation"]
 - !private ["PSs8Hashable", "text"]
+- !private ["PSs8Hashable", "uid"]
+- ["PSs8Hashable", "userid"]
 - !private ["PSs8Hashable", "value"]
+- ["PSs8Hashable", "viewDidAppear"]
 - ["PSs8Hashable", "viewDidLoad"]
 - ["PSs8Hashable", "viewWillAppear"]
 - ["PSs8Hashable", "viewWillDisappear"]
 - ["PSs8Hashable", ""]
 - ["SQ", "deinit"]
 - !private ["VVSS13CharacterView5Index", "Distance"]
+- !private ["VVSS13CharacterView5Index", "deinit"]
+- !private ["VVSS17UnicodeScalarView5Index", "deinit"]
+- !private ["VVSS9UTF16View5Index", "deinit"]
 - !private ["PSs9Indexable", "Generator"]
 - !private ["PSs9Indexable", "Index"]
+- !private ["PSs9Indexable", "IntegerLiteralType"]
+- !private ["PSs9Indexable", "Stride"]
 - !private ["PSs9Indexable", "SubSequence"]
 - !private ["PSs9Indexable", "_Element"]
 - !private ["PSs9Indexable", "append"]
@@ -562,15 +637,20 @@ depends-member:
 - !private ["VSs4Int8", "IntegerLiteralType"]
 - !private ["PSs21IntegerArithmeticType", "Distance"]
 - !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["PSs21IntegerArithmeticType", "Stride"]
 - !private ["PSs21IntegerArithmeticType", "_DisabledRangeIndex"]
+- !private ["PSs21IntegerArithmeticType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs25IntegerLiteralConvertible", "Distance"]
 - !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs25IntegerLiteralConvertible", "Stride"]
 - !private ["PSs25IntegerLiteralConvertible", "_DisabledRangeIndex"]
+- !private ["PSs25IntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["PSs25IntegerLiteralConvertible", "init"]
 - !private ["PSs11IntegerType", "Distance"]
 - !private ["PSs11IntegerType", "IntegerLiteralType"]
+- !private ["PSs11IntegerType", "Stride"]
 - !private ["PSs11IntegerType", "_DisabledRangeIndex"]
+- !private ["PSs11IntegerType", "_DisallowMixedSignArithmetic"]
 - !private ["PSo17MKMapViewDelegate", "CLLocationManager"]
 - ["PSo17MKMapViewDelegate", "Double"]
 - ["PSo17MKMapViewDelegate", "Firebase"]
@@ -588,6 +668,8 @@ depends-member:
 - ["PSo17MKMapViewDelegate", "locationManagerDidResumeLocationUpdates"]
 - ["PSo17MKMapViewDelegate", "locationManagerShouldDisplayHeadingCalibration"]
 - !private ["PSo17MKMapViewDelegate", "longitude"]
+- !private ["PSo17MKMapViewDelegate", "lookingForCatLat"]
+- !private ["PSo17MKMapViewDelegate", "lookingForCatLong"]
 - ["PSo17MKMapViewDelegate", "mapView"]
 - ["PSo17MKMapViewDelegate", "mapViewDidFailLoadingMap"]
 - ["PSo17MKMapViewDelegate", "mapViewDidFinishLoadingMap"]
@@ -600,6 +682,7 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "print"]
 - !private ["PSo17MKMapViewDelegate", "ref"]
 - !private ["PSo17MKMapViewDelegate", "signal"]
+- !private ["PSo17MKMapViewDelegate", "userid"]
 - ["PSo17MKMapViewDelegate", ""]
 - !private ["PSs14MirrorPathType", "Distance"]
 - !private ["PSs14MirrorPathType", "IntegerLiteralType"]
@@ -608,6 +691,8 @@ depends-member:
 - !private ["PSs14MirrorPathType", "init"]
 - !private ["PSs21MutableCollectionType", "Generator"]
 - !private ["PSs21MutableCollectionType", "Index"]
+- !private ["PSs21MutableCollectionType", "IntegerLiteralType"]
+- !private ["PSs21MutableCollectionType", "Stride"]
 - !private ["PSs21MutableCollectionType", "SubSequence"]
 - !private ["PSs21MutableCollectionType", "_Element"]
 - !private ["PSs21MutableCollectionType", "append"]
@@ -617,6 +702,8 @@ depends-member:
 - !private ["PSs21MutableCollectionType", "subscript"]
 - !private ["PSs16MutableIndexable", "Generator"]
 - !private ["PSs16MutableIndexable", "Index"]
+- !private ["PSs16MutableIndexable", "IntegerLiteralType"]
+- !private ["PSs16MutableIndexable", "Stride"]
 - !private ["PSs16MutableIndexable", "SubSequence"]
 - !private ["PSs16MutableIndexable", "_Element"]
 - !private ["PSs16MutableIndexable", "append"]
@@ -624,8 +711,13 @@ depends-member:
 - ["PSs16MutableIndexable", "init"]
 - !private ["PSs16MutableIndexable", "map"]
 - !private ["PSs16MutableIndexable", "subscript"]
+- !private ["VSs12MutableSlice", "IntegerLiteralType"]
+- !private ["VSs12MutableSlice", "Stride"]
+- !private ["VSs12MutableSlice", "deinit"]
 - !private ["PSs16MutableSliceable", "Generator"]
 - !private ["PSs16MutableSliceable", "Index"]
+- !private ["PSs16MutableSliceable", "IntegerLiteralType"]
+- !private ["PSs16MutableSliceable", "Stride"]
 - !private ["PSs16MutableSliceable", "SubSequence"]
 - !private ["PSs16MutableSliceable", "_Element"]
 - !private ["PSs16MutableSliceable", "append"]
@@ -660,8 +752,10 @@ depends-member:
 - ["PSo8NSCoding", "locationManagerDidPauseLocationUpdates"]
 - ["PSo8NSCoding", "locationManagerDidResumeLocationUpdates"]
 - ["PSo8NSCoding", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo8NSCoding", "logOutDidTouch"]
+- ["PSo8NSCoding", "logOutButtonDidTouch"]
 - ["PSo8NSCoding", "longitude"]
+- ["PSo8NSCoding", "lookingForCatLat"]
+- ["PSo8NSCoding", "lookingForCatLong"]
 - ["PSo8NSCoding", "mapView"]
 - ["PSo8NSCoding", "mapViewDidFailLoadingMap"]
 - ["PSo8NSCoding", "mapViewDidFinishLoadingMap"]
@@ -677,6 +771,8 @@ depends-member:
 - ["PSo8NSCoding", "ref"]
 - ["PSo8NSCoding", "signal"]
 - !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "userid"]
+- ["PSo8NSCoding", "viewDidAppear"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", "viewWillAppear"]
 - ["PSo8NSCoding", "viewWillDisappear"]
@@ -709,8 +805,10 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "locationManagerDidPauseLocationUpdates"]
 - ["PSo26NSExtensionRequestHandling", "locationManagerDidResumeLocationUpdates"]
 - ["PSo26NSExtensionRequestHandling", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo26NSExtensionRequestHandling", "logOutDidTouch"]
+- ["PSo26NSExtensionRequestHandling", "logOutButtonDidTouch"]
 - ["PSo26NSExtensionRequestHandling", "longitude"]
+- ["PSo26NSExtensionRequestHandling", "lookingForCatLat"]
+- ["PSo26NSExtensionRequestHandling", "lookingForCatLong"]
 - ["PSo26NSExtensionRequestHandling", "mapView"]
 - ["PSo26NSExtensionRequestHandling", "mapViewDidFailLoadingMap"]
 - ["PSo26NSExtensionRequestHandling", "mapViewDidFinishLoadingMap"]
@@ -725,6 +823,8 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "red"]
 - ["PSo26NSExtensionRequestHandling", "ref"]
 - ["PSo26NSExtensionRequestHandling", "signal"]
+- ["PSo26NSExtensionRequestHandling", "userid"]
+- ["PSo26NSExtensionRequestHandling", "viewDidAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", "viewWillAppear"]
 - ["PSo26NSExtensionRequestHandling", "viewWillDisappear"]
@@ -754,6 +854,7 @@ depends-member:
 - ["CSo8NSObject", "colorSignal"]
 - ["CSo8NSObject", "colors"]
 - !private ["CSo8NSObject", "coordinate"]
+- !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "description"]
 - !private ["CSo8NSObject", "desiredAccuracy"]
@@ -767,8 +868,10 @@ depends-member:
 - ["CSo8NSObject", "locationManagerDidPauseLocationUpdates"]
 - ["CSo8NSObject", "locationManagerDidResumeLocationUpdates"]
 - ["CSo8NSObject", "locationManagerShouldDisplayHeadingCalibration"]
-- ["CSo8NSObject", "logOutDidTouch"]
+- ["CSo8NSObject", "logOutButtonDidTouch"]
 - ["CSo8NSObject", "longitude"]
+- ["CSo8NSObject", "lookingForCatLat"]
+- ["CSo8NSObject", "lookingForCatLong"]
 - ["CSo8NSObject", "mapView"]
 - ["CSo8NSObject", "mapViewDidFailLoadingMap"]
 - ["CSo8NSObject", "mapViewDidFinishLoadingMap"]
@@ -777,6 +880,7 @@ depends-member:
 - ["CSo8NSObject", "mapViewWillStartLoadingMap"]
 - ["CSo8NSObject", "mapViewWillStartLocatingUser"]
 - ["CSo8NSObject", "mapViewWillStartRenderingMap"]
+- !private ["CSo8NSObject", "observeAuthEventWithBlock"]
 - !private ["CSo8NSObject", "performSegueWithIdentifier"]
 - ["CSo8NSObject", "previousLocation"]
 - !private ["CSo8NSObject", "print"]
@@ -790,7 +894,10 @@ depends-member:
 - !private ["CSo8NSObject", "stopUpdatingHeading"]
 - !private ["CSo8NSObject", "stopUpdatingLocation"]
 - !private ["CSo8NSObject", "text"]
+- !private ["CSo8NSObject", "uid"]
+- ["CSo8NSObject", "userid"]
 - !private ["CSo8NSObject", "value"]
+- ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidLoad"]
 - ["CSo8NSObject", "viewWillAppear"]
 - ["CSo8NSObject", "viewWillDisappear"]
@@ -825,8 +932,10 @@ depends-member:
 - ["PSo16NSObjectProtocol", "locationManagerDidPauseLocationUpdates"]
 - ["PSo16NSObjectProtocol", "locationManagerDidResumeLocationUpdates"]
 - ["PSo16NSObjectProtocol", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo16NSObjectProtocol", "logOutDidTouch"]
+- ["PSo16NSObjectProtocol", "logOutButtonDidTouch"]
 - ["PSo16NSObjectProtocol", "longitude"]
+- ["PSo16NSObjectProtocol", "lookingForCatLat"]
+- ["PSo16NSObjectProtocol", "lookingForCatLong"]
 - ["PSo16NSObjectProtocol", "mapView"]
 - ["PSo16NSObjectProtocol", "mapViewDidFailLoadingMap"]
 - ["PSo16NSObjectProtocol", "mapViewDidFinishLoadingMap"]
@@ -835,6 +944,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "mapViewWillStartLoadingMap"]
 - ["PSo16NSObjectProtocol", "mapViewWillStartLocatingUser"]
 - ["PSo16NSObjectProtocol", "mapViewWillStartRenderingMap"]
+- !private ["PSo16NSObjectProtocol", "observeAuthEventWithBlock"]
 - !private ["PSo16NSObjectProtocol", "performSegueWithIdentifier"]
 - ["PSo16NSObjectProtocol", "previousLocation"]
 - !private ["PSo16NSObjectProtocol", "print"]
@@ -848,7 +958,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "stopUpdatingHeading"]
 - !private ["PSo16NSObjectProtocol", "stopUpdatingLocation"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo16NSObjectProtocol", "uid"]
+- ["PSo16NSObjectProtocol", "userid"]
 - !private ["PSo16NSObjectProtocol", "value"]
+- ["PSo16NSObjectProtocol", "viewDidAppear"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", "viewWillAppear"]
 - ["PSo16NSObjectProtocol", "viewWillDisappear"]
@@ -859,7 +972,10 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "characters"]
 - !private ["PSs21NilLiteralConvertible", "Some"]
+- !private ["PSs21NilLiteralConvertible", "Stride"]
+- !private ["VSs16ObjectIdentifier", "deinit"]
 - !private ["Sq", "Some"]
+- !private ["Sq", "Stride"]
 - !private ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "characters"]
 - !private ["PSs16OutputStreamType", "init"]
@@ -893,8 +1009,10 @@ depends-member:
 - ["C8NekoKari20PlayerViewController", "locationManagerDidPauseLocationUpdates"]
 - ["C8NekoKari20PlayerViewController", "locationManagerDidResumeLocationUpdates"]
 - ["C8NekoKari20PlayerViewController", "locationManagerShouldDisplayHeadingCalibration"]
-- ["C8NekoKari20PlayerViewController", "logOutDidTouch"]
+- ["C8NekoKari20PlayerViewController", "logOutButtonDidTouch"]
 - ["C8NekoKari20PlayerViewController", "longitude"]
+- ["C8NekoKari20PlayerViewController", "lookingForCatLat"]
+- ["C8NekoKari20PlayerViewController", "lookingForCatLong"]
 - ["C8NekoKari20PlayerViewController", "mapView"]
 - ["C8NekoKari20PlayerViewController", "mapViewDidFailLoadingMap"]
 - ["C8NekoKari20PlayerViewController", "mapViewDidFinishLoadingMap"]
@@ -909,17 +1027,23 @@ depends-member:
 - ["C8NekoKari20PlayerViewController", "red"]
 - ["C8NekoKari20PlayerViewController", "ref"]
 - ["C8NekoKari20PlayerViewController", "signal"]
+- ["C8NekoKari20PlayerViewController", "userid"]
+- ["C8NekoKari20PlayerViewController", "viewDidAppear"]
 - ["C8NekoKari20PlayerViewController", "viewDidLoad"]
 - ["C8NekoKari20PlayerViewController", "viewWillAppear"]
 - ["C8NekoKari20PlayerViewController", "viewWillDisappear"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
+- !private ["PSs21RandomAccessIndexType", "Stride"]
 - !private ["PSs21RandomAccessIndexType", "_DisabledRangeIndex"]
+- !private ["PSs21RandomAccessIndexType", "_DisallowMixedSignArithmetic"]
 - !private ["VSs5Range", "Generator"]
 - !private ["VSs5Range", "contains"]
 - !private ["VSs14RangeGenerator", "Element"]
 - !private ["PSs30RangeReplaceableCollectionType", "Generator"]
 - !private ["PSs30RangeReplaceableCollectionType", "Index"]
+- !private ["PSs30RangeReplaceableCollectionType", "IntegerLiteralType"]
+- !private ["PSs30RangeReplaceableCollectionType", "Stride"]
 - !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["PSs30RangeReplaceableCollectionType", "_Element"]
 - !private ["PSs30RangeReplaceableCollectionType", "append"]
@@ -936,6 +1060,8 @@ depends-member:
 - !private ["PSs12SequenceType", "Element"]
 - !private ["PSs12SequenceType", "Generator"]
 - !private ["PSs12SequenceType", "Index"]
+- !private ["PSs12SequenceType", "IntegerLiteralType"]
+- !private ["PSs12SequenceType", "Stride"]
 - !private ["PSs12SequenceType", "SubSequence"]
 - !private ["PSs12SequenceType", "_Element"]
 - !private ["PSs12SequenceType", "append"]
@@ -945,6 +1071,7 @@ depends-member:
 - !private ["PSs12SequenceType", "map"]
 - !private ["PSs12SequenceType", "split"]
 - !private ["PSs12SequenceType", "subscript"]
+- !private ["VSs8SetIndex", "deinit"]
 - !private ["PSs17SignedIntegerType", "Distance"]
 - !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
 - !private ["PSs17SignedIntegerType", "_DisabledRangeIndex"]
@@ -952,6 +1079,7 @@ depends-member:
 - !private ["PSs16SignedNumberType", "IntegerLiteralType"]
 - !private ["PSs16SignedNumberType", "Stride"]
 - !private ["PSs16SignedNumberType", "_DisabledRangeIndex"]
+- !private ["PSs16SignedNumberType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs16SignedNumberType", "init"]
 - !private ["VSs5Slice", "Generator"]
 - !private ["VSs5Slice", "Index"]
@@ -963,6 +1091,7 @@ depends-member:
 - !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["PSs10Strideable", "Stride"]
 - !private ["PSs10Strideable", "_DisabledRangeIndex"]
+- !private ["PSs10Strideable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs10Strideable", "init"]
 - !private ["SS", "characters"]
 - !private ["SS", "deinit"]
@@ -999,8 +1128,10 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "locationManagerDidPauseLocationUpdates"]
 - ["PSo21UIAppearanceContainer", "locationManagerDidResumeLocationUpdates"]
 - ["PSo21UIAppearanceContainer", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo21UIAppearanceContainer", "logOutDidTouch"]
+- ["PSo21UIAppearanceContainer", "logOutButtonDidTouch"]
 - ["PSo21UIAppearanceContainer", "longitude"]
+- ["PSo21UIAppearanceContainer", "lookingForCatLat"]
+- ["PSo21UIAppearanceContainer", "lookingForCatLong"]
 - ["PSo21UIAppearanceContainer", "mapView"]
 - ["PSo21UIAppearanceContainer", "mapViewDidFailLoadingMap"]
 - ["PSo21UIAppearanceContainer", "mapViewDidFinishLoadingMap"]
@@ -1016,6 +1147,8 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "ref"]
 - ["PSo21UIAppearanceContainer", "signal"]
 - !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", "userid"]
+- ["PSo21UIAppearanceContainer", "viewDidAppear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "viewWillAppear"]
 - ["PSo21UIAppearanceContainer", "viewWillDisappear"]
@@ -1044,8 +1177,10 @@ depends-member:
 - ["PSo18UIContentContainer", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UIContentContainer", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UIContentContainer", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo18UIContentContainer", "logOutDidTouch"]
+- ["PSo18UIContentContainer", "logOutButtonDidTouch"]
 - ["PSo18UIContentContainer", "longitude"]
+- ["PSo18UIContentContainer", "lookingForCatLat"]
+- ["PSo18UIContentContainer", "lookingForCatLong"]
 - ["PSo18UIContentContainer", "mapView"]
 - ["PSo18UIContentContainer", "mapViewDidFailLoadingMap"]
 - ["PSo18UIContentContainer", "mapViewDidFinishLoadingMap"]
@@ -1060,6 +1195,8 @@ depends-member:
 - ["PSo18UIContentContainer", "red"]
 - ["PSo18UIContentContainer", "ref"]
 - ["PSo18UIContentContainer", "signal"]
+- ["PSo18UIContentContainer", "userid"]
+- ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", "viewWillAppear"]
 - ["PSo18UIContentContainer", "viewWillDisappear"]
@@ -1092,8 +1229,10 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UIFocusEnvironment", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UIFocusEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo18UIFocusEnvironment", "logOutDidTouch"]
+- ["PSo18UIFocusEnvironment", "logOutButtonDidTouch"]
 - ["PSo18UIFocusEnvironment", "longitude"]
+- ["PSo18UIFocusEnvironment", "lookingForCatLat"]
+- ["PSo18UIFocusEnvironment", "lookingForCatLong"]
 - ["PSo18UIFocusEnvironment", "mapView"]
 - ["PSo18UIFocusEnvironment", "mapViewDidFailLoadingMap"]
 - ["PSo18UIFocusEnvironment", "mapViewDidFinishLoadingMap"]
@@ -1109,6 +1248,8 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "ref"]
 - ["PSo18UIFocusEnvironment", "signal"]
 - !private ["PSo18UIFocusEnvironment", "text"]
+- ["PSo18UIFocusEnvironment", "userid"]
+- ["PSo18UIFocusEnvironment", "viewDidAppear"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", "viewWillAppear"]
 - ["PSo18UIFocusEnvironment", "viewWillDisappear"]
@@ -1145,8 +1286,10 @@ depends-member:
 - ["CSo11UIResponder", "locationManagerDidPauseLocationUpdates"]
 - ["CSo11UIResponder", "locationManagerDidResumeLocationUpdates"]
 - ["CSo11UIResponder", "locationManagerShouldDisplayHeadingCalibration"]
-- ["CSo11UIResponder", "logOutDidTouch"]
+- ["CSo11UIResponder", "logOutButtonDidTouch"]
 - ["CSo11UIResponder", "longitude"]
+- ["CSo11UIResponder", "lookingForCatLat"]
+- ["CSo11UIResponder", "lookingForCatLong"]
 - ["CSo11UIResponder", "mapView"]
 - ["CSo11UIResponder", "mapViewDidFailLoadingMap"]
 - ["CSo11UIResponder", "mapViewDidFinishLoadingMap"]
@@ -1162,6 +1305,8 @@ depends-member:
 - ["CSo11UIResponder", "ref"]
 - ["CSo11UIResponder", "signal"]
 - !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "userid"]
+- ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["CSo11UIResponder", "viewWillAppear"]
 - ["CSo11UIResponder", "viewWillDisappear"]
@@ -1188,8 +1333,10 @@ depends-member:
 - ["PSo16UIStateRestoring", "locationManagerDidPauseLocationUpdates"]
 - ["PSo16UIStateRestoring", "locationManagerDidResumeLocationUpdates"]
 - ["PSo16UIStateRestoring", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo16UIStateRestoring", "logOutDidTouch"]
+- ["PSo16UIStateRestoring", "logOutButtonDidTouch"]
 - ["PSo16UIStateRestoring", "longitude"]
+- ["PSo16UIStateRestoring", "lookingForCatLat"]
+- ["PSo16UIStateRestoring", "lookingForCatLong"]
 - ["PSo16UIStateRestoring", "mapView"]
 - ["PSo16UIStateRestoring", "mapViewDidFailLoadingMap"]
 - ["PSo16UIStateRestoring", "mapViewDidFinishLoadingMap"]
@@ -1204,6 +1351,8 @@ depends-member:
 - ["PSo16UIStateRestoring", "red"]
 - ["PSo16UIStateRestoring", "ref"]
 - ["PSo16UIStateRestoring", "signal"]
+- ["PSo16UIStateRestoring", "userid"]
+- ["PSo16UIStateRestoring", "viewDidAppear"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", "viewWillAppear"]
 - ["PSo16UIStateRestoring", "viewWillDisappear"]
@@ -1232,8 +1381,10 @@ depends-member:
 - ["PSo18UITraitEnvironment", "locationManagerDidPauseLocationUpdates"]
 - ["PSo18UITraitEnvironment", "locationManagerDidResumeLocationUpdates"]
 - ["PSo18UITraitEnvironment", "locationManagerShouldDisplayHeadingCalibration"]
-- ["PSo18UITraitEnvironment", "logOutDidTouch"]
+- ["PSo18UITraitEnvironment", "logOutButtonDidTouch"]
 - ["PSo18UITraitEnvironment", "longitude"]
+- ["PSo18UITraitEnvironment", "lookingForCatLat"]
+- ["PSo18UITraitEnvironment", "lookingForCatLong"]
 - ["PSo18UITraitEnvironment", "mapView"]
 - ["PSo18UITraitEnvironment", "mapViewDidFailLoadingMap"]
 - ["PSo18UITraitEnvironment", "mapViewDidFinishLoadingMap"]
@@ -1249,6 +1400,8 @@ depends-member:
 - ["PSo18UITraitEnvironment", "ref"]
 - ["PSo18UITraitEnvironment", "signal"]
 - !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", "userid"]
+- ["PSo18UITraitEnvironment", "viewDidAppear"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", "viewWillAppear"]
 - ["PSo18UITraitEnvironment", "viewWillDisappear"]
@@ -1284,8 +1437,10 @@ depends-member:
 - ["CSo16UIViewController", "locationManagerDidPauseLocationUpdates"]
 - ["CSo16UIViewController", "locationManagerDidResumeLocationUpdates"]
 - ["CSo16UIViewController", "locationManagerShouldDisplayHeadingCalibration"]
-- ["CSo16UIViewController", "logOutDidTouch"]
+- ["CSo16UIViewController", "logOutButtonDidTouch"]
 - ["CSo16UIViewController", "longitude"]
+- ["CSo16UIViewController", "lookingForCatLat"]
+- ["CSo16UIViewController", "lookingForCatLong"]
 - ["CSo16UIViewController", "mapView"]
 - ["CSo16UIViewController", "mapViewDidFailLoadingMap"]
 - ["CSo16UIViewController", "mapViewDidFinishLoadingMap"]
@@ -1300,16 +1455,30 @@ depends-member:
 - ["CSo16UIViewController", "red"]
 - ["CSo16UIViewController", "ref"]
 - ["CSo16UIViewController", "signal"]
+- ["CSo16UIViewController", "userid"]
+- ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", "viewWillDisappear"]
 - ["CSo16UIViewController", ""]
+- !private ["VSs5UInt8", "IntegerLiteralType"]
+- !private ["VSs5UInt8", "Stride"]
+- !private ["VSs5UInt8", "_DisallowMixedSignArithmetic"]
 - !private ["VSs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "characters"]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- !private ["VSs20UnsafeMutablePointer", "Stride"]
+- !private ["VSs20UnsafeMutablePointer", "deinit"]
+- !private ["VSs13UnsafePointer", "deinit"]
+- !private ["PSs19UnsignedIntegerType", "IntegerLiteralType"]
+- !private ["PSs19UnsignedIntegerType", "Stride"]
+- !private ["PSs19UnsignedIntegerType", "_DisallowMixedSignArithmetic"]
 - !private ["CSs17_AnyGeneratorBase", "Element"]
 - !private ["PSs10_ArrayType", "Generator"]
 - !private ["PSs10_ArrayType", "Index"]
+- !private ["PSs10_ArrayType", "IntegerLiteralType"]
+- !private ["PSs10_ArrayType", "Stride"]
 - !private ["PSs10_ArrayType", "SubSequence"]
 - !private ["PSs10_ArrayType", "_Element"]
 - !private ["PSs10_ArrayType", "append"]
@@ -1322,11 +1491,13 @@ depends-member:
 - !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["PSs31_BuiltinFloatLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs31_BuiltinFloatLiteralConvertible", "Stride"]
+- !private ["PSs31_BuiltinFloatLiteralConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["PSs31_BuiltinFloatLiteralConvertible", "init"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "Stride"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "_DisabledRangeIndex"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "init"]
 - !private ["PSs32_BuiltinStringLiteralConvertible", "characters"]
 - !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
@@ -1336,14 +1507,18 @@ depends-member:
 - !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["PSs19_CVarArgAlignedType", "IntegerLiteralType"]
 - !private ["PSs19_CVarArgAlignedType", "Stride"]
+- !private ["PSs19_CVarArgAlignedType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs19_CVarArgAlignedType", "init"]
 - !private ["PSs22_CVarArgPassedAsDouble", "IntegerLiteralType"]
 - !private ["PSs22_CVarArgPassedAsDouble", "Stride"]
+- !private ["PSs22_CVarArgPassedAsDouble", "_DisallowMixedSignArithmetic"]
 - !private ["PSs22_CVarArgPassedAsDouble", "init"]
 - !private ["PSs16_CocoaStringType", "characters"]
 - !private ["PSs24_ColorLiteralConvertible", "init"]
 - !private ["PSs24_DestructorSafeContainer", "Generator"]
 - !private ["PSs24_DestructorSafeContainer", "Index"]
+- !private ["PSs24_DestructorSafeContainer", "IntegerLiteralType"]
+- !private ["PSs24_DestructorSafeContainer", "Stride"]
 - !private ["PSs24_DestructorSafeContainer", "SubSequence"]
 - !private ["PSs24_DestructorSafeContainer", "_Element"]
 - !private ["PSs24_DestructorSafeContainer", "append"]
@@ -1351,15 +1526,24 @@ depends-member:
 - ["PSs24_DestructorSafeContainer", "init"]
 - !private ["PSs24_DestructorSafeContainer", "map"]
 - !private ["PSs24_DestructorSafeContainer", "subscript"]
+- !private ["PSs28_DisallowMixedSignArithmetic", "IntegerLiteralType"]
+- !private ["PSs28_DisallowMixedSignArithmetic", "Stride"]
+- !private ["PSs28_DisallowMixedSignArithmetic", "_DisallowMixedSignArithmetic"]
 - !private ["PSs14_Incrementable", "Distance"]
 - !private ["PSs14_Incrementable", "IntegerLiteralType"]
+- !private ["PSs14_Incrementable", "Stride"]
 - !private ["PSs14_Incrementable", "_DisabledRangeIndex"]
+- !private ["PSs14_Incrementable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs22_IntegerArithmeticType", "Distance"]
 - !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
+- !private ["PSs22_IntegerArithmeticType", "Stride"]
 - !private ["PSs22_IntegerArithmeticType", "_DisabledRangeIndex"]
+- !private ["PSs22_IntegerArithmeticType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs12_IntegerType", "Distance"]
 - !private ["PSs12_IntegerType", "IntegerLiteralType"]
+- !private ["PSs12_IntegerType", "Stride"]
 - !private ["PSs12_IntegerType", "_DisabledRangeIndex"]
+- !private ["PSs12_IntegerType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs21_ObjectiveCBridgeable", "Distance"]
 - !private ["PSs21_ObjectiveCBridgeable", "Generator"]
 - !private ["PSs21_ObjectiveCBridgeable", "Index"]
@@ -1367,6 +1551,7 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "Stride"]
 - !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["PSs21_ObjectiveCBridgeable", "_DisabledRangeIndex"]
+- !private ["PSs21_ObjectiveCBridgeable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs21_ObjectiveCBridgeable", "_Element"]
 - !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["PSs21_ObjectiveCBridgeable", "append"]
@@ -1375,9 +1560,13 @@ depends-member:
 - ["PSs21_ObjectiveCBridgeable", "init"]
 - !private ["PSs21_ObjectiveCBridgeable", "map"]
 - !private ["PSs21_ObjectiveCBridgeable", "subscript"]
+- !private ["VSs26_OptionalNilComparisonType", "deinit"]
+- !private ["PSs12_PointerType", "Stride"]
 - !private ["PSs22_RandomAccessAmbiguity", "Distance"]
 - !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
+- !private ["PSs22_RandomAccessAmbiguity", "Stride"]
 - !private ["PSs22_RandomAccessAmbiguity", "_DisabledRangeIndex"]
+- !private ["PSs22_RandomAccessAmbiguity", "_DisallowMixedSignArithmetic"]
 - !private ["PSs12_Reflectable", "Distance"]
 - !private ["PSs12_Reflectable", "Generator"]
 - !private ["PSs12_Reflectable", "Index"]
@@ -1386,6 +1575,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "Stride"]
 - !private ["PSs12_Reflectable", "SubSequence"]
 - !private ["PSs12_Reflectable", "_DisabledRangeIndex"]
+- !private ["PSs12_Reflectable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs12_Reflectable", "_Element"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["PSs12_Reflectable", "append"]
@@ -1404,7 +1594,12 @@ depends-member:
 - !private ["PSs11_Strideable", "IntegerLiteralType"]
 - !private ["PSs11_Strideable", "Stride"]
 - !private ["PSs11_Strideable", "_DisabledRangeIndex"]
+- !private ["PSs11_Strideable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs11_Strideable", "init"]
+- !private ["PSs18_StringElementType", "IntegerLiteralType"]
+- !private ["PSs18_StringElementType", "Stride"]
+- !private ["PSs18_StringElementType", "_DisallowMixedSignArithmetic"]
+- !private ["VSC30_SwiftNSOperatingSystemVersion", "deinit"]
 depends-nominal:
 - !private "PSs16AbsoluteValuable"
 - !private "CSs12AnyGenerator"
@@ -1414,6 +1609,7 @@ depends-nominal:
 - "PSs23ArrayLiteralConvertible"
 - !private "VSs10ArraySlice"
 - !private "PSs22BidirectionalIndexType"
+- !private "OSs3Bit"
 - !private "PSs21BitwiseOperationsType"
 - !private "Sb"
 - !private "PSs25BooleanLiteralConvertible"
@@ -1432,10 +1628,12 @@ depends-nominal:
 - !private "PSs10Comparable"
 - "PSs28CustomDebugStringConvertible"
 - "PSs23CustomStringConvertible"
+- !private "VSs15DictionaryIndex"
 - !private "Sd"
 - "PSs9Equatable"
 - !private "PSs9ErrorType"
 - !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- !private "CSo9FAuthData"
 - !private "CSo13FDataSnapshot"
 - !private "OSC10FEventType"
 - "CSo6FQuery"
@@ -1448,6 +1646,8 @@ depends-nominal:
 - "PSs8Hashable"
 - "SQ"
 - !private "VVSS13CharacterView5Index"
+- !private "VVSS17UnicodeScalarView5Index"
+- !private "VVSS9UTF16View5Index"
 - "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
 - !private "Si"
@@ -1460,6 +1660,7 @@ depends-nominal:
 - !private "PSs14MirrorPathType"
 - "PSs21MutableCollectionType"
 - "PSs16MutableIndexable"
+- !private "VSs12MutableSlice"
 - "PSs16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
@@ -1471,6 +1672,7 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - !private "PSs21NilLiteralConvertible"
+- !private "VSs16ObjectIdentifier"
 - !private "Sq"
 - !private "PSs16OutputStreamType"
 - "C8NekoKari20PlayerViewController"
@@ -1480,6 +1682,7 @@ depends-nominal:
 - "PSs30RangeReplaceableCollectionType"
 - !private "PSs16RawRepresentable"
 - "PSs12SequenceType"
+- !private "VSs8SetIndex"
 - !private "PSs17SignedIntegerType"
 - !private "PSs16SignedNumberType"
 - !private "VSs5Slice"
@@ -1504,7 +1707,11 @@ depends-nominal:
 - !private "CSo6UIView"
 - "CSo16UIViewController"
 - !private "VSs5UInt8"
+- !private "Sc"
 - !private "PSs31UnicodeScalarLiteralConvertible"
+- !private "VSs20UnsafeMutablePointer"
+- !private "VSs13UnsafePointer"
+- !private "PSs19UnsignedIntegerType"
 - !private "CSs17_AnyGeneratorBase"
 - "PSs10_ArrayType"
 - !private "PSs33_BuiltinBooleanLiteralConvertible"
@@ -1519,14 +1726,19 @@ depends-nominal:
 - !private "PSs16_CocoaStringType"
 - !private "PSs24_ColorLiteralConvertible"
 - "PSs24_DestructorSafeContainer"
+- !private "PSs28_DisallowMixedSignArithmetic"
 - !private "PSs14_Incrementable"
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"
 - "PSs21_ObjectiveCBridgeable"
+- !private "VSs26_OptionalNilComparisonType"
+- !private "PSs12_PointerType"
 - !private "PSs22_RandomAccessAmbiguity"
 - "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"
 - !private "PSs11_Strideable"
+- !private "PSs18_StringElementType"
+- !private "VSC30_SwiftNSOperatingSystemVersion"
 depends-dynamic-lookup:
 - !private "observeEventType"
 depends-external:
@@ -1555,4 +1767,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
-interface-hash: "525b2166e781cfc91cc33665749ced66"
+interface-hash: "a8df91791d1cade93dc553ddfc95665f"

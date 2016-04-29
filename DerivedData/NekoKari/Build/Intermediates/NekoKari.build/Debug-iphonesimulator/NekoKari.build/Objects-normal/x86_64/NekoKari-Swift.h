@@ -236,8 +236,9 @@ SWIFT_CLASS("_TtC8NekoKari26PlayerQRCodeViewController")
 SWIFT_CLASS("_TtC8NekoKari20PlayerViewController")
 @interface PlayerViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (nonatomic, readonly, copy) NSString * __nonnull admin;
+@property (nonatomic, copy) NSString * __nonnull userid;
 @property (nonatomic, readonly, strong) Firebase * __null_unspecified ref;
-- (IBAction)logOutDidTouch:(id __nonnull)sender;
+- (IBAction)logOutButtonDidTouch:(id __nonnull)sender;
 - (IBAction)catBookButtonDidTouch:(id __nonnull)sender;
 - (IBAction)foundCatButtonDidTouch:(id __nonnull)sender;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified signal;
@@ -251,9 +252,12 @@ SWIFT_CLASS("_TtC8NekoKari20PlayerViewController")
 @property (nonatomic) double longitude;
 @property (nonatomic, copy) NSArray<NSNumber *> * __nonnull catLatitude;
 @property (nonatomic, copy) NSArray<NSNumber *> * __nonnull catLongitude;
+@property (nonatomic) double lookingForCatLat;
+@property (nonatomic) double lookingForCatLong;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
 - (void)viewWillAppear:(BOOL)animated;
+- (void)didReceiveMemoryWarning;
+- (void)viewDidAppear:(BOOL)animated;
 - (void)viewWillDisappear:(BOOL)animated;
 - (void)locationManager:(CLLocationManager * __nonnull)manager didUpdateToLocation:(CLLocation * __nonnull)newLocation fromLocation:(CLLocation * __nonnull)oldLocation;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;

@@ -121,33 +121,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-n6-YJZ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <color key="barTintColor" red="0.96078431369999995" green="0.70588235290000001" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Find Cats" id="DMa-NE-571">
-                                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="6DT-gS-Bla">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xGQ-CX-Tex">
-                                                <rect key="frame" x="446" y="7" width="134" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Log Out">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="logOutDidTouch:" destination="OBm-IY-M2O" eventType="touchUpInside" id="CUG-Ie-AIF"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="-111" y="20" width="622" height="44"/>
-                                </variation>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBh-YD-dI4">
                                 <rect key="frame" x="479" y="520" width="71" height="30"/>
                                 <state key="normal" title="Found Cat"/>
@@ -158,7 +131,7 @@
                                     <action selector="foundCatButtonDidTouch:" destination="OBm-IY-M2O" eventType="touchUpInside" id="shR-BK-vCX"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-qp-00D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-qp-00D">
                                 <rect key="frame" x="0.0" y="72" width="600" height="428"/>
                                 <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="64" width="639" height="660"/>
@@ -174,6 +147,23 @@
                                     <action selector="catBookButtonDidTouch:" destination="OBm-IY-M2O" eventType="touchUpInside" id="Suy-oJ-7Vc"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aw-Z5-31m">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <color key="barTintColor" red="0.96078431369999995" green="0.70588235290000001" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Find Cat" id="3Oe-xA-ole">
+                                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="quz-4r-nhU">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="logOutButtonDidTouch:" destination="OBm-IY-M2O" id="Vur-99-rfo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JU-xV-RGR">
                                 <rect key="frame" x="20" y="20" width="42" height="21"/>
                                 <constraints>
@@ -199,8 +189,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6aw-Z5-31m" firstAttribute="leading" secondItem="Ckc-um-53O" secondAttribute="leadingMargin" constant="-20" id="295-pt-cpq"/>
                             <constraint firstItem="mDY-qp-00D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ckc-um-53O" secondAttribute="leadingMargin" constant="-20" id="5iI-HC-VzZ"/>
-                            <constraint firstItem="P7j-n6-YJZ" firstAttribute="centerX" secondItem="Ckc-um-53O" secondAttribute="centerX" id="AUM-jr-cv5"/>
                             <constraint firstItem="RdV-ij-Spp" firstAttribute="leading" secondItem="Ckc-um-53O" secondAttribute="leadingMargin" constant="69" id="Bbh-U7-Qfb">
                                 <variation key="heightClass=regular-widthClass=compact" constant="268"/>
                             </constraint>
@@ -209,24 +199,12 @@
                             </constraint>
                             <constraint firstItem="CPt-ya-HUx" firstAttribute="top" secondItem="KBh-YD-dI4" secondAttribute="bottom" constant="10" id="Hx1-0T-3IG"/>
                             <constraint firstItem="8JU-xV-RGR" firstAttribute="centerX" secondItem="Ckc-um-53O" secondAttribute="centerX" id="JZP-70-3Ol"/>
-                            <constraint firstItem="P7j-n6-YJZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ckc-um-53O" secondAttribute="leading" id="Lxh-x5-XqZ">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-12"/>
-                            </constraint>
                             <constraint firstItem="CPt-ya-HUx" firstAttribute="top" secondItem="mDY-qp-00D" secondAttribute="bottom" constant="100" id="MyO-KZ-cDh">
                                 <variation key="heightClass=regular-widthClass=compact" constant="300"/>
                             </constraint>
                             <constraint firstItem="KBh-YD-dI4" firstAttribute="leading" secondItem="Ckc-um-53O" secondAttribute="leadingMargin" constant="10" id="NqD-Ds-ZxP"/>
                             <constraint firstItem="RdV-ij-Spp" firstAttribute="leading" secondItem="Ckc-um-53O" secondAttribute="leading" constant="89" id="Nsb-fo-nDR"/>
-                            <constraint firstItem="mDY-qp-00D" firstAttribute="top" secondItem="P7j-n6-YJZ" secondAttribute="bottom" id="O5K-jB-LQK"/>
-                            <constraint firstItem="P7j-n6-YJZ" firstAttribute="leading" secondItem="Ckc-um-53O" secondAttribute="leadingMargin" constant="-20" id="Q2Q-q1-3EO"/>
-                            <constraint firstItem="P7j-n6-YJZ" firstAttribute="top" secondItem="nGg-nF-iEH" secondAttribute="bottom" constant="8" id="RSK-Ic-0pe"/>
                             <constraint firstItem="KBh-YD-dI4" firstAttribute="top" secondItem="mDY-qp-00D" secondAttribute="bottom" constant="20" id="RyZ-V9-fBL"/>
-                            <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="P7j-n6-YJZ" secondAttribute="trailing" constant="-30" id="UOy-Go-XsL">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-230"/>
-                            </constraint>
-                            <constraint firstItem="P7j-n6-YJZ" firstAttribute="top" secondItem="nGg-nF-iEH" secondAttribute="bottom" constant="8" id="Vp8-Ih-C74">
-                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
-                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="KBh-YD-dI4" secondAttribute="trailing" constant="30" id="X8I-Pe-LPM">
                                 <variation key="heightClass=regular-widthClass=compact" constant="231"/>
                             </constraint>
@@ -243,10 +221,8 @@
                             <constraint firstItem="CPt-ya-HUx" firstAttribute="top" secondItem="KBh-YD-dI4" secondAttribute="bottom" constant="50" id="fFM-ek-Rl3">
                                 <variation key="heightClass=regular-widthClass=compact" constant="250"/>
                             </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="P7j-n6-YJZ" secondAttribute="trailing" constant="-20" id="fo5-Qk-QPf">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-220"/>
-                            </constraint>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="mDY-qp-00D" secondAttribute="trailing" constant="-259" id="iL9-ru-p8F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6aw-Z5-31m" secondAttribute="trailing" constant="-20" id="pvf-eb-HG9"/>
                             <constraint firstItem="mDY-qp-00D" firstAttribute="centerX" secondItem="Ckc-um-53O" secondAttribute="centerX" id="qKR-B6-fl4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mDY-qp-00D" secondAttribute="trailing" constant="-20" id="qkA-Ea-nVe">
                                 <variation key="heightClass=regular-widthClass=compact" constant="-220"/>
@@ -254,6 +230,7 @@
                             <constraint firstItem="KBh-YD-dI4" firstAttribute="baseline" secondItem="RdV-ij-Spp" secondAttribute="baseline" id="vuM-s3-xh1">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="6aw-Z5-31m" firstAttribute="top" secondItem="nGg-nF-iEH" secondAttribute="bottom" constant="8" id="zF2-0v-lQz"/>
                             <constraint firstItem="8JU-xV-RGR" firstAttribute="centerY" secondItem="Ckc-um-53O" secondAttribute="centerY" id="zUZ-AY-733"/>
                         </constraints>
                         <variation key="default">
@@ -263,10 +240,6 @@
                             <mask key="constraints">
                                 <exclude reference="JZP-70-3Ol"/>
                                 <exclude reference="zUZ-AY-733"/>
-                                <exclude reference="AUM-jr-cv5"/>
-                                <exclude reference="Lxh-x5-XqZ"/>
-                                <exclude reference="UOy-Go-XsL"/>
-                                <exclude reference="Vp8-Ih-C74"/>
                                 <exclude reference="5iI-HC-VzZ"/>
                                 <exclude reference="bzI-WX-DcB"/>
                                 <exclude reference="iL9-ru-p8F"/>
@@ -301,15 +274,7 @@
                             <mask key="constraints">
                                 <include reference="JZP-70-3Ol"/>
                                 <include reference="zUZ-AY-733"/>
-                                <include reference="AUM-jr-cv5"/>
-                                <include reference="Lxh-x5-XqZ"/>
-                                <exclude reference="Q2Q-q1-3EO"/>
-                                <exclude reference="RSK-Ic-0pe"/>
-                                <include reference="UOy-Go-XsL"/>
-                                <include reference="Vp8-Ih-C74"/>
-                                <exclude reference="fo5-Qk-QPf"/>
                                 <include reference="5iI-HC-VzZ"/>
-                                <exclude reference="O5K-jB-LQK"/>
                                 <include reference="bzI-WX-DcB"/>
                                 <exclude reference="ciO-eo-XCI"/>
                                 <include reference="iL9-ru-p8F"/>

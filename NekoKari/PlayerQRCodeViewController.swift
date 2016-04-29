@@ -10,8 +10,7 @@ import UIKit
 import AVFoundation
 
 class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    
-   
+
    
     @IBAction func qrButtonDidTouch(sender: AnyObject) {
         performSegueWithIdentifier("qrToFoundCat", sender: self)

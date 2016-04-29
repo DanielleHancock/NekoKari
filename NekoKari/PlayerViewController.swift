@@ -14,9 +14,11 @@ import Firebase
 class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let admin = "032adce6-9477-47a7-a763-75b5b3f80663"
+    var userid = ""
     let ref = Firebase(url: "https://nekokari.firebaseio.com")
     
-    @IBAction func logOutDidTouch(sender: AnyObject) {
+
+    @IBAction func logOutButtonDidTouch(sender: AnyObject) {
         performSegueWithIdentifier("playerToLogin", sender: self)
     }
     
@@ -73,10 +75,23 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
 //    var catLongitude = -80.2765731970 ;
     var catLatitude = [Double](count: 5, repeatedValue: 0.0)
     var catLongitude = [Double](count: 5, repeatedValue: 0.0)
+    var lookingForCatLat = 0.0
+    var lookingForCatLong = 0.0
 
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        ref.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                // user authenticated
+                self.userid = authData.uid
+                print("uid" + self.userid)
+            } else {
+                // No user is signed in
+            }
+        })
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+    
         
         var catRefArray: [AnyObject] = []
         var catNameArray: [AnyObject] = []
@@ -98,10 +113,9 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                     let latlong = value.characters.split{$0 == ","}.map(String.init)
                     let isIndexValid:Bool = latlong.indices.contains(1)
                     if isIndexValid {
-                        for i in 0...4 {
+                     
                             self.catLatitude[i] = Double(latlong[0])!
                             self.catLongitude[i] = Double(latlong[1])!
-                        }
                         print(String(self.catLatitude) + "," + String(self.catLongitude))
                         
                     }
@@ -139,7 +153,7 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         //mapView.mapType = MKMapType(rawValue: 0)!
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
         //updates the location
         locationManager.startUpdatingHeading()
         locationManager.startUpdatingLocation()
@@ -159,40 +173,55 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         self.longitude = newLocation.coordinate.longitude
         //print(String(self.latitude))
         //print (String(abs(self.latitude - catLatitude)))
-        
-        //2 meters or 6 feet
-            if (abs(self.latitude - catLatitude[0]) <= 0.00002 || abs(self.longitude - catLongitude[0]) <= 0.00002) {
-                signal.text = "Flaming Hot"
-                colorSignal.backgroundColor = UIColor(red: 255.0/255, green: 0.0/255, blue: 0.0/255, alpha: 1.0)
-            }
-                //4 meters or 13 feet = .00004
-                //8 meters or 26 feet = .00007
-            else if (abs(self.latitude - catLatitude[0]) <= 0.00007 || abs(self.longitude - catLongitude[0]) <= 0.00007) {
-                signal.text = "Hot"
-                colorSignal.backgroundColor = UIColor(red: 255.0/255, green: 75.0/255, blue: 75.0/255, alpha: 1.0)
-            }
-                //8 meters or 26 feet = .00007
-                //17 meters or 55 feet = .00015
-            else if (abs(self.latitude - catLatitude[0]) <= 0.00015 || abs(self.longitude - catLongitude[0]) <= 0.00015) {
-                signal.text = "Warm"
-                colorSignal.backgroundColor = UIColor(red: 255.0/255, green: 175.0/255, blue: 175.0/255, alpha: 1.0)
-            }
-                //11 meters or 36 feet = .00010
-                //22 meters or 75 feet = .00020
-            else if (abs(self.latitude - catLatitude[0]) <= 0.00020 || abs(self.longitude - catLongitude[0]) <= 0.00020) {
-                signal.text = "Chilly"
-                colorSignal.backgroundColor = UIColor(red: 175.0/255, green: 175.0/255, blue: 255.0/255, alpha: 1.0)
-            }
-                // 16 meters or 52 feet = .00014
-                // 30 meters or 100 feet = .00027
-            else if (abs(self.latitude - catLatitude[0]) <= 0.00027 || abs(self.longitude - catLongitude[0]) <= 0.00027) {
-                signal.text = "Cold"
-                colorSignal.backgroundColor = UIColor(red: 75.0/255, green: 75.0/255, blue: 255.0/255, alpha: 1.0)
+        lookingForCatLat = catLatitude[0]
+        lookingForCatLong = catLongitude[0]
+        //print(String(lookingForCatLong))
+        for i in 0...3 {
+            if (self.latitude - lookingForCatLat < self.latitude - catLatitude[i+1]) {
+                if (self.longitude - lookingForCatLong < self.longitude - catLongitude[i+1]) {
+                }
             }
             else {
-                signal.text = "Ice Cold"
-                colorSignal.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 255.0/255, alpha: 1.0)
+                lookingForCatLat = catLatitude[i+1]
+                lookingForCatLong = catLongitude[i+1]
             }
+        }
+        //print("Latitude" + String(lookingForCatLat))
+        //print("Longitude" + String(lookingForCatLong))
+        //2 meters or 6 feet
+        if (abs(self.latitude - lookingForCatLat) <= 0.000020 || abs(self.longitude - lookingForCatLong) <= 0.00020) {
+            signal.text = "Flaming Hot"
+            colorSignal.backgroundColor = UIColor(red: 255.0/255, green: 0.0/255, blue: 0.0/255, alpha: 1.0)
+        }
+            //4 meters or 13 feet = .00004
+            //8 meters or 26 feet = .00007
+        else if (abs(self.latitude - lookingForCatLat) <= 0.000070 || abs(self.longitude - lookingForCatLong) <= 0.000070) {
+            signal.text = "Hot"
+            colorSignal.backgroundColor = UIColor(red: 255.0/255, green: 75.0/255, blue: 75.0/255, alpha: 1.0)
+        }
+            //8 meters or 26 feet = .00007
+            //17 meters or 55 feet = .00015
+        else if (abs(self.latitude - lookingForCatLat) <= 0.000150 || abs(self.longitude - lookingForCatLong) <= 0.000150) {
+            signal.text = "Warm"
+            colorSignal.backgroundColor = UIColor(red: 255.0/255, green: 175.0/255, blue: 175.0/255, alpha: 1.0)
+        }
+            //11 meters or 36 feet = .00010
+            //22 meters or 75 feet = .00020
+        else if (abs(self.latitude - lookingForCatLat) <= 0.000200 || abs(self.longitude - lookingForCatLong) <= 0.000200) {
+            signal.text = "Chilly"
+            colorSignal.backgroundColor = UIColor(red: 175.0/255, green: 175.0/255, blue: 255.0/255, alpha: 1.0)
+        }
+            // 16 meters or 52 feet = .00014
+            // 30 meters or 100 feet = .00027
+        else if (abs(self.latitude - lookingForCatLat) <= 0.000270 || abs(self.longitude - lookingForCatLong) <= 0.000270) {
+            signal.text = "Cold"
+            colorSignal.backgroundColor = UIColor(red: 75.0/255, green: 75.0/255, blue: 255.0/255, alpha: 1.0)
+        }
+        else {
+            signal.text = "Ice Cold"
+            colorSignal.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 255.0/255, alpha: 1.0)
+        }
+
         
         
     }
