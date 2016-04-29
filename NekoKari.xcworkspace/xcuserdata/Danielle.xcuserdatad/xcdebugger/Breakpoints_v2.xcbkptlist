@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NekoKari/PlayerCatBookViewController.swift"
+            timestampString = "483061899.507962"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "4"
+            endingLineNumber = "4">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NekoKari.PlayerCatBookViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; NekoKari.PlayerCatBookViewController"
+                  moduleName = "NekoKari"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Danielle/Desktop/NekoKari/NekoKari/PlayerCatBookViewController.swift"
+                  timestampString = "483062742.896052"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "81">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NekoKari.PlayerCatBookViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;NekoKari.PlayerCatBookViewController&gt;"
+                  moduleName = "NekoKari"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Danielle/Desktop/NekoKari/NekoKari/PlayerCatBookViewController.swift"
+                  timestampString = "483062742.896557"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,13 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "20a2b4bf8fdbaa74381ad5b3815ac47f"
+build_time: [514058579, 873121000]
+inputs:
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/ShareData.swift": [511584009, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/LogInViewController.swift": [514007908, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/PlayerCatBookViewController.swift": [514056304, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/PlayerQRCodeViewController.swift": [514058578, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/PlayerFoundCatViewController.swift": [514012213, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/AdminAddCatTableViewController.swift": [514005681, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/AdminViewController.swift": [514007911, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/AppDelegate.swift": [511468970, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/PlayerViewController.swift": [514057846, 0]

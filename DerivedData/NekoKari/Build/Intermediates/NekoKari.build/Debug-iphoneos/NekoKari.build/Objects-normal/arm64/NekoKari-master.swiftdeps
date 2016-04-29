@@ -1,0 +1,10 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "4c59af912528bb20bdb5b2662f8e7e8d"
+build_time: [513977460, 414433000]
+inputs:
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/LogInViewController.swift": !dirty [511583574, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/ShareData.swift": !dirty [511584009, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/AdminAddCatTableViewController.swift": !dirty [513976694, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/AdminViewController.swift": !dirty [513977323, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/PlayerViewController.swift": !dirty [511495995, 0]
+  "/Users/sunlisha/Desktop/NekoKari/NekoKari/AppDelegate.swift": !dirty [511468970, 0]
