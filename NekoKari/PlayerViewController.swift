@@ -178,19 +178,42 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         //print (String(abs(self.latitude - catLatitude)))
         
         //print(String(lookingForCatLong))
+       calculateCat()
+
+        
+    }
+    
+    func calculateCat() {
         for i in 0...3 {
-            if (self.latitude - lookingForCatLat < self.latitude - catLatitude[i+1]) {
-                if (self.longitude - lookingForCatLong < self.longitude - catLongitude[i+1]) {
+            if (self.latitude - catLatitude[i] <= self.latitude - catLatitude[i+1]) {
+                //print(String(self.latitude - catLatitude[i]))
+                //print(String(self.longitude - catLongitude[i]))
+                if (self.longitude - catLongitude[i] <= self.longitude - catLongitude[i+1]) {
+                    //print("Did if" + String(i))
+                    //print(String(self.latitude - catLatitude[i]))
+                    lookingForCatLat = catLatitude[i]
+                    lookingForCatLong = catLongitude[i]
+                }
+                else {
+                    //print("Did first else" + String(i))
+                    //print(String(catLatitude[i+1]))
+                    lookingForCatLat = catLatitude[i+1]
+                    lookingForCatLong = catLongitude[i+1]
                 }
             }
             else {
+                //print("Did second else" + String(i))
+                //print(String(catLatitude[i+1]))
                 lookingForCatLat = catLatitude[i+1]
                 lookingForCatLong = catLongitude[i+1]
             }
         }
+        
+        
         //print("Latitude" + String(lookingForCatLat))
         //print("Longitude" + String(lookingForCatLong))
         //2 meters or 6 feet
+        print(String(self.latitude))
         if (abs(self.latitude - lookingForCatLat) <= 0.000020 || abs(self.longitude - lookingForCatLong) <= 0.00020) {
             signal.text = "Flaming Hot"
             colorSignal.backgroundColor = UIColor(red: 255.0/255, green: 0.0/255, blue: 0.0/255, alpha: 1.0)
@@ -223,9 +246,6 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
             signal.text = "Ice Cold"
             colorSignal.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 255.0/255, alpha: 1.0)
         }
-
-        
-        
     }
 
 
