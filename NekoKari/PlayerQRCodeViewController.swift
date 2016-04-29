@@ -9,9 +9,14 @@
 import UIKit
 import AVFoundation
 
+protocol PlayerQRCodeViewControllerDelegate: class {
+    func foundCatName(sender: PlayerQRCodeViewController, catName: String)
+}
+
 class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
-   
+    weak var delegate:PlayerQRCodeViewControllerDelegate?
+    
     @IBAction func qrButtonDidTouch(sender: AnyObject) {
         performSegueWithIdentifier("qrToFoundCat", sender: self)
     }
@@ -30,6 +35,7 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
     
     // Added to support different barcodes
     let supportedBarCodes = [AVMetadataObjectTypeQRCode, AVMetadataObjectTypeCode128Code, AVMetadataObjectTypeCode39Code, AVMetadataObjectTypeCode93Code, AVMetadataObjectTypeUPCECode, AVMetadataObjectTypePDF417Code, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeAztecCode]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +123,23 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
             if metadataObj.stringValue != nil {
                // messageLabel.text = "Dectected"
                 if metadataObj.stringValue == "Snowball" {
+                    delegate?.foundCatName(self, catName: "Snowball")
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                }
+                else if metadataObj.stringValue == "Smokey" {
+                    delegate?.foundCatName(self, catName: "Smokey")
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                }
+                else if metadataObj.stringValue == "Shadow" {
+                    delegate?.foundCatName(self, catName: "Shadow")
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                }
+                else if metadataObj.stringValue == "Spots" {
+                    delegate?.foundCatName(self, catName: "Spots")
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                }
+                else if metadataObj.stringValue == "Sunny" {
+                    delegate?.foundCatName(self, catName: "Sunny")
                     performSegueWithIdentifier("qrToFoundCat", sender: self)
 
                 }

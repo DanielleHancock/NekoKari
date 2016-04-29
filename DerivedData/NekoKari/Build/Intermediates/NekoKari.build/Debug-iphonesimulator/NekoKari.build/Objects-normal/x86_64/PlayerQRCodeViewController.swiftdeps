@@ -1,55 +1,60 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "PlayerQRCodeViewControllerDelegate"
 - "PlayerQRCodeViewController"
 provides-nominal:
+- "P8NekoKari34PlayerQRCodeViewControllerDelegate"
 - "C8NekoKari26PlayerQRCodeViewController"
 provides-member:
+- ["P8NekoKari34PlayerQRCodeViewControllerDelegate", ""]
 - ["C8NekoKari26PlayerQRCodeViewController", ""]
 provides-dynamic-lookup:
 - "captureSession"
-- "supportedBarCodes"
 - "didReceiveMemoryWarning"
-- "qrButtonDidTouch"
-- "backToFindCatPageDidTouch"
+- "supportedBarCodes"
 - "viewDidLoad"
 - "videoPreviewLayer"
 - "captureOutput"
+- "qrButtonDidTouch"
+- "backToFindCatPageDidTouch"
 - "qrCodeFrameView"
 - "cameraViewBounds"
 depends-top-level:
-- "UIViewController"
-- "AVCaptureConnection"
-- "PlayerQRCodeViewController"
-- !private "!="
-- "AVMetadataObjectTypeAztecCode"
 - !private "StringLiteralType"
+- !private "UIColor"
+- "AVCaptureMetadataOutputObjectsDelegate"
+- "Array"
+- "AVCaptureConnection"
 - "AnyObject"
 - "AVCaptureSession"
-- !private "AVMediaTypeVideo"
-- "AVMetadataObjectTypeQRCode"
-- !private "AVCaptureMetadataOutput"
-- !private "=="
-- "AVCaptureMetadataOutputObjectsDelegate"
-- !private "print"
-- "UIView"
 - !private "AVCaptureDevice"
-- !private "AVLayerVideoGravityResizeAspectFill"
-- !private "AVMetadataMachineReadableCodeObject"
-- "AVMetadataObjectTypeCode39Code"
-- "AVMetadataObjectTypeCode93Code"
-- !private "dispatch_get_main_queue"
-- "UIImageView"
-- "AVMetadataObjectTypeCode128Code"
-- "AVMetadataObjectTypePDF417Code"
-- "AVCaptureOutput"
-- !private "CGRectZero"
-- "AVMetadataObjectTypeEAN13Code"
 - !private "||"
-- !private "AVCaptureDeviceInput"
+- "AVMetadataObjectTypeQRCode"
+- !private "!="
+- "AVCaptureOutput"
+- "AVMetadataObjectTypeCode39Code"
+- "UIView"
+- !private "AVMediaTypeVideo"
+- !private "=="
+- "AVMetadataObjectTypeCode128Code"
+- !private "AVMetadataMachineReadableCodeObject"
 - "AVCaptureVideoPreviewLayer"
-- "Array"
-- !private "UIColor"
 - "AVMetadataObjectTypeUPCECode"
+- "PlayerQRCodeViewController"
+- "PlayerQRCodeViewControllerDelegate"
+- !private "AVCaptureDeviceInput"
+- "UIViewController"
+- "AVMetadataObjectTypeCode93Code"
+- !private "AVLayerVideoGravityResizeAspectFill"
+- !private "CGRectZero"
+- "String"
+- "UIImageView"
+- "AVMetadataObjectTypeAztecCode"
+- !private "AVCaptureMetadataOutput"
+- "AVMetadataObjectTypePDF417Code"
+- !private "print"
+- "AVMetadataObjectTypeEAN13Code"
+- !private "dispatch_get_main_queue"
 depends-member:
 - !private ["CSo15AVCaptureDevice", "defaultDeviceWithMediaType"]
 - !private ["CSo20AVCaptureDeviceInput", "init"]
@@ -78,6 +83,7 @@ depends-member:
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "cameraViewBounds"]
 - ["PSo38AVCaptureMetadataOutputObjectsDelegate", "captureOutput"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "captureSession"]
+- !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "delegate"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "dispatch_get_main_queue"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "performSegueWithIdentifier"]
 - !private ["PSo38AVCaptureMetadataOutputObjectsDelegate", "print"]
@@ -135,6 +141,7 @@ depends-member:
 - ["PSs9AnyObject", "captureSession"]
 - !private ["PSs9AnyObject", "defaultDeviceWithMediaType"]
 - !private ["PSs9AnyObject", "deinit"]
+- ["PSs9AnyObject", "delegate"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
 - !private ["PSs9AnyObject", "dispatch_get_main_queue"]
 - !private ["PSs9AnyObject", "frame"]
@@ -234,6 +241,7 @@ depends-member:
 - ["PSs11CVarArgType", "captureOutput"]
 - ["PSs11CVarArgType", "captureSession"]
 - !private ["PSs11CVarArgType", "defaultDeviceWithMediaType"]
+- ["PSs11CVarArgType", "delegate"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["PSs11CVarArgType", "dispatch_get_main_queue"]
 - !private ["PSs11CVarArgType", "frame"]
@@ -317,6 +325,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "contains"]
 - !private ["PSs23CustomStringConvertible", "count"]
 - !private ["PSs23CustomStringConvertible", "defaultDeviceWithMediaType"]
+- ["PSs23CustomStringConvertible", "delegate"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["PSs23CustomStringConvertible", "dispatch_get_main_queue"]
 - !private ["PSs23CustomStringConvertible", "frame"]
@@ -375,6 +384,7 @@ depends-member:
 - ["PSs9Equatable", "captureOutput"]
 - ["PSs9Equatable", "captureSession"]
 - !private ["PSs9Equatable", "defaultDeviceWithMediaType"]
+- ["PSs9Equatable", "delegate"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "dispatch_get_main_queue"]
 - !private ["PSs9Equatable", "frame"]
@@ -435,6 +445,7 @@ depends-member:
 - ["PSs8Hashable", "captureOutput"]
 - ["PSs8Hashable", "captureSession"]
 - !private ["PSs8Hashable", "defaultDeviceWithMediaType"]
+- ["PSs8Hashable", "delegate"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "dispatch_get_main_queue"]
 - !private ["PSs8Hashable", "frame"]
@@ -530,6 +541,7 @@ depends-member:
 - ["PSo8NSCoding", "cameraViewBounds"]
 - ["PSo8NSCoding", "captureOutput"]
 - ["PSo8NSCoding", "captureSession"]
+- ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "dispatch_get_main_queue"]
 - !private ["PSo8NSCoding", "frame"]
@@ -571,6 +583,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "cameraViewBounds"]
 - ["PSo26NSExtensionRequestHandling", "captureOutput"]
 - ["PSo26NSExtensionRequestHandling", "captureSession"]
+- ["PSo26NSExtensionRequestHandling", "delegate"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "dispatch_get_main_queue"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -604,6 +617,7 @@ depends-member:
 - ["CSo8NSObject", "AnyObject"]
 - !private ["CSo8NSObject", "CGColor"]
 - !private ["CSo8NSObject", "CGRectZero"]
+- ["CSo8NSObject", "PlayerQRCodeViewControllerDelegate"]
 - !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UIImageView"]
 - ["CSo8NSObject", "UIView"]
@@ -620,6 +634,7 @@ depends-member:
 - ["CSo8NSObject", "captureOutput"]
 - ["CSo8NSObject", "captureSession"]
 - !private ["CSo8NSObject", "defaultDeviceWithMediaType"]
+- ["CSo8NSObject", "delegate"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "dispatch_get_main_queue"]
 - !private ["CSo8NSObject", "frame"]
@@ -673,6 +688,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "captureOutput"]
 - ["PSo16NSObjectProtocol", "captureSession"]
 - !private ["PSo16NSObjectProtocol", "defaultDeviceWithMediaType"]
+- ["PSo16NSObjectProtocol", "delegate"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "dispatch_get_main_queue"]
 - !private ["PSo16NSObjectProtocol", "frame"]
@@ -720,6 +736,7 @@ depends-member:
 - ["C8NekoKari26PlayerQRCodeViewController", "AVMetadataObjectTypeUPCECode"]
 - ["C8NekoKari26PlayerQRCodeViewController", "AnyObject"]
 - !private ["C8NekoKari26PlayerQRCodeViewController", "CGRectZero"]
+- ["C8NekoKari26PlayerQRCodeViewController", "PlayerQRCodeViewControllerDelegate"]
 - !private ["C8NekoKari26PlayerQRCodeViewController", "UIColor"]
 - ["C8NekoKari26PlayerQRCodeViewController", "UIImageView"]
 - ["C8NekoKari26PlayerQRCodeViewController", "UIView"]
@@ -728,6 +745,7 @@ depends-member:
 - ["C8NekoKari26PlayerQRCodeViewController", "captureOutput"]
 - ["C8NekoKari26PlayerQRCodeViewController", "captureSession"]
 - ["C8NekoKari26PlayerQRCodeViewController", "deinit"]
+- ["C8NekoKari26PlayerQRCodeViewController", "delegate"]
 - ["C8NekoKari26PlayerQRCodeViewController", "didReceiveMemoryWarning"]
 - !private ["C8NekoKari26PlayerQRCodeViewController", "dispatch_get_main_queue"]
 - ["C8NekoKari26PlayerQRCodeViewController", "init"]
@@ -739,6 +757,9 @@ depends-member:
 - ["C8NekoKari26PlayerQRCodeViewController", "videoPreviewLayer"]
 - !private ["C8NekoKari26PlayerQRCodeViewController", "view"]
 - ["C8NekoKari26PlayerQRCodeViewController", "viewDidLoad"]
+- ["P8NekoKari34PlayerQRCodeViewControllerDelegate", "PlayerQRCodeViewController"]
+- ["P8NekoKari34PlayerQRCodeViewControllerDelegate", "String"]
+- ["P8NekoKari34PlayerQRCodeViewControllerDelegate", "foundCatName"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["VSs5Range", "deinit"]
@@ -803,6 +824,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "cameraViewBounds"]
 - ["PSo21UIAppearanceContainer", "captureOutput"]
 - ["PSo21UIAppearanceContainer", "captureSession"]
+- ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "dispatch_get_main_queue"]
 - !private ["PSo21UIAppearanceContainer", "frame"]
@@ -841,6 +863,7 @@ depends-member:
 - ["PSo18UIContentContainer", "cameraViewBounds"]
 - ["PSo18UIContentContainer", "captureOutput"]
 - ["PSo18UIContentContainer", "captureSession"]
+- ["PSo18UIContentContainer", "delegate"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "dispatch_get_main_queue"]
 - ["PSo18UIContentContainer", "init"]
@@ -887,6 +910,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "cameraViewBounds"]
 - ["PSo18UIFocusEnvironment", "captureOutput"]
 - ["PSo18UIFocusEnvironment", "captureSession"]
+- ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "dispatch_get_main_queue"]
 - !private ["PSo18UIFocusEnvironment", "frame"]
@@ -922,6 +946,7 @@ depends-member:
 - ["CSo11UIResponder", "AVMetadataObjectTypeUPCECode"]
 - ["CSo11UIResponder", "AnyObject"]
 - !private ["CSo11UIResponder", "CGRectZero"]
+- ["CSo11UIResponder", "PlayerQRCodeViewControllerDelegate"]
 - !private ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UIImageView"]
 - ["CSo11UIResponder", "UIView"]
@@ -931,6 +956,7 @@ depends-member:
 - ["CSo11UIResponder", "cameraViewBounds"]
 - ["CSo11UIResponder", "captureOutput"]
 - ["CSo11UIResponder", "captureSession"]
+- ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "dispatch_get_main_queue"]
 - !private ["CSo11UIResponder", "frame"]
@@ -966,6 +992,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "cameraViewBounds"]
 - ["PSo16UIStateRestoring", "captureOutput"]
 - ["PSo16UIStateRestoring", "captureSession"]
+- ["PSo16UIStateRestoring", "delegate"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "dispatch_get_main_queue"]
 - ["PSo16UIStateRestoring", "init"]
@@ -1002,6 +1029,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "cameraViewBounds"]
 - ["PSo18UITraitEnvironment", "captureOutput"]
 - ["PSo18UITraitEnvironment", "captureSession"]
+- ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "dispatch_get_main_queue"]
 - !private ["PSo18UITraitEnvironment", "frame"]
@@ -1041,6 +1069,7 @@ depends-member:
 - ["CSo16UIViewController", "AVMetadataObjectTypeUPCECode"]
 - ["CSo16UIViewController", "AnyObject"]
 - !private ["CSo16UIViewController", "CGRectZero"]
+- ["CSo16UIViewController", "PlayerQRCodeViewControllerDelegate"]
 - !private ["CSo16UIViewController", "UIColor"]
 - ["CSo16UIViewController", "UIImageView"]
 - ["CSo16UIViewController", "UIView"]
@@ -1048,6 +1077,7 @@ depends-member:
 - ["CSo16UIViewController", "cameraViewBounds"]
 - ["CSo16UIViewController", "captureOutput"]
 - ["CSo16UIViewController", "captureSession"]
+- ["CSo16UIViewController", "delegate"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - !private ["CSo16UIViewController", "dispatch_get_main_queue"]
 - ["CSo16UIViewController", "init"]
@@ -1174,6 +1204,7 @@ depends-nominal:
 - "PSs21NilLiteralConvertible"
 - "Sq"
 - "C8NekoKari26PlayerQRCodeViewController"
+- "P8NekoKari34PlayerQRCodeViewControllerDelegate"
 - !private "PSs21RandomAccessIndexType"
 - !private "VSs5Range"
 - "PSs30RangeReplaceableCollectionType"
@@ -1238,4 +1269,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
-interface-hash: "bec1ff2c1d08eb0d61d98cc6ece63426"
+interface-hash: "6a455c12637d65a3abdadaf474908c7f"

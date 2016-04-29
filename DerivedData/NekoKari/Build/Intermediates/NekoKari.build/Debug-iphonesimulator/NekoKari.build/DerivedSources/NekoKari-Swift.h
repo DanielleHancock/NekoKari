@@ -202,11 +202,18 @@ SWIFT_CLASS("_TtC8NekoKari27PlayerCatBookViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class PlayerQRCodeViewController;
 
 SWIFT_CLASS("_TtC8NekoKari28PlayerFoundCatViewController")
 @interface PlayerFoundCatViewController : UIViewController
+@property (nonatomic, copy) NSString * __nonnull userid;
+@property (nonatomic, readonly, strong) Firebase * __null_unspecified ref;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified foundCatNameLabel;
 - (IBAction)findMoreCatsButtonDidTouch:(id __nonnull)sender;
 - (IBAction)catBookButtonDidTouch:(id __nonnull)sender;
+- (void)viewDidLoad;
+- (void)viewDidAppear:(BOOL)animated;
+- (void)foundCatName:(PlayerQRCodeViewController * __nonnull)sender catName:(NSString * __nonnull)catName;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

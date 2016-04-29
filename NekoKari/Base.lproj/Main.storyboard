@@ -412,6 +412,12 @@
                                     <action selector="findMoreCatsButtonDidTouch:" destination="3BH-yj-Etx" eventType="touchUpInside" id="7v1-Cf-Ow9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qZ-ET-dnj">
+                                <rect key="frame" x="279" y="142" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -461,6 +467,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="foundCatNameLabel" destination="6qZ-ET-dnj" id="zmu-AF-J5i"/>
                         <segue destination="OBm-IY-M2O" kind="presentation" identifier="foundCatToPlayer" id="Ba2-qZ-04H"/>
                         <segue destination="6fv-0z-tAY" kind="presentation" identifier="foundCatToCatBook" id="St8-Xy-bTj"/>
                     </connections>
@@ -1181,8 +1188,8 @@
         <image name="nekokarilogodropshadow" width="630" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Ba2-qZ-04H"/>
         <segue reference="k0O-Ob-gol"/>
-        <segue reference="eUK-tJ-z3X"/>
-        <segue reference="iZH-iz-BRB"/>
+        <segue reference="St8-Xy-bTj"/>
     </inferredMetricsTieBreakers>
 </document>
