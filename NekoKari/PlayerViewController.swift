@@ -79,6 +79,7 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
     var lookingForCatLong = 0.0
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         ref.observeAuthEventWithBlock({ authData in
             if authData != nil {
                 // user authenticated
@@ -88,10 +89,6 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                 // No user is signed in
             }
         })
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-    
         
         var catRefArray: [AnyObject] = []
         var catNameArray: [AnyObject] = []
@@ -113,9 +110,9 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
                     let latlong = value.characters.split{$0 == ","}.map(String.init)
                     let isIndexValid:Bool = latlong.indices.contains(1)
                     if isIndexValid {
-                     
-                            self.catLatitude[i] = Double(latlong[0])!
-                            self.catLongitude[i] = Double(latlong[1])!
+                        
+                        self.catLatitude[i] = Double(latlong[0])!
+                        self.catLongitude[i] = Double(latlong[1])!
                         print(String(self.catLatitude) + "," + String(self.catLongitude))
                         
                     }
@@ -142,11 +139,11 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
         }
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
-        
-        //mapView.delegate = self
-        //mapView.showsUserLocation = true
-        //mapView.mapType = MKMapType(rawValue: 0)!
-        //mapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        locationManager.startUpdatingLocation()
+        locationManager.startUpdatingHeading()
         
     }
     
@@ -247,6 +244,7 @@ class PlayerViewController: UIViewController, CLLocationManagerDelegate, MKMapVi
             colorSignal.backgroundColor = UIColor(red: 0.0/255, green: 0.0/255, blue: 255.0/255, alpha: 1.0)
         }
     }
+
 
 
 }
