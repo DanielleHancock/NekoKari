@@ -45,4 +45,11 @@ class PlayerFoundCatViewController: UIViewController, PlayerQRCodeViewController
         self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue([catName:true])
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "qrToFound"{
+            let vc = segue.destinationViewController as! PlayerQRCodeViewController
+            vc.delegate = self
+        }
+    }
+    
 }

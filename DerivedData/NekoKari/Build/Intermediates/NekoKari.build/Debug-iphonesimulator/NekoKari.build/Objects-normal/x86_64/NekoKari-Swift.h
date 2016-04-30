@@ -203,6 +203,7 @@ SWIFT_CLASS("_TtC8NekoKari27PlayerCatBookViewController")
 @end
 
 @class PlayerQRCodeViewController;
+@class UIStoryboardSegue;
 
 SWIFT_CLASS("_TtC8NekoKari28PlayerFoundCatViewController")
 @interface PlayerFoundCatViewController : UIViewController
@@ -214,6 +215,7 @@ SWIFT_CLASS("_TtC8NekoKari28PlayerFoundCatViewController")
 - (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)foundCatName:(PlayerQRCodeViewController * __nonnull)sender catName:(NSString * __nonnull)catName;
+- (void)prepareForSegue:(UIStoryboardSegue * __nonnull)segue sender:(id __null_unspecified)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -225,7 +227,6 @@ SWIFT_CLASS("_TtC8NekoKari28PlayerFoundCatViewController")
 
 SWIFT_CLASS("_TtC8NekoKari26PlayerQRCodeViewController")
 @interface PlayerQRCodeViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
-- (IBAction)qrButtonDidTouch:(id __nonnull)sender;
 - (IBAction)backToFindCatPageDidTouch:(id __nonnull)sender;
 @property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified cameraViewBounds;
 @property (nonatomic, strong) AVCaptureSession * __nullable captureSession;
@@ -267,6 +268,7 @@ SWIFT_CLASS("_TtC8NekoKari20PlayerViewController")
 - (void)viewDidAppear:(BOOL)animated;
 - (void)viewWillDisappear:(BOOL)animated;
 - (void)locationManager:(CLLocationManager * __nonnull)manager didUpdateToLocation:(CLLocation * __nonnull)newLocation fromLocation:(CLLocation * __nonnull)oldLocation;
+- (void)calculateCat;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

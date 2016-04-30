@@ -9,52 +9,51 @@ provides-member:
 - ["P8NekoKari34PlayerQRCodeViewControllerDelegate", ""]
 - ["C8NekoKari26PlayerQRCodeViewController", ""]
 provides-dynamic-lookup:
+- "videoPreviewLayer"
+- "cameraViewBounds"
+- "qrCodeFrameView"
+- "backToFindCatPageDidTouch"
 - "captureSession"
-- "didReceiveMemoryWarning"
 - "supportedBarCodes"
 - "viewDidLoad"
-- "videoPreviewLayer"
 - "captureOutput"
-- "qrButtonDidTouch"
-- "backToFindCatPageDidTouch"
-- "qrCodeFrameView"
-- "cameraViewBounds"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- !private "StringLiteralType"
-- !private "UIColor"
-- "AVCaptureMetadataOutputObjectsDelegate"
-- "Array"
-- "AVCaptureConnection"
-- "AnyObject"
 - "AVCaptureSession"
-- !private "AVCaptureDevice"
-- !private "||"
-- "AVMetadataObjectTypeQRCode"
-- !private "!="
-- "AVCaptureOutput"
-- "AVMetadataObjectTypeCode39Code"
-- "UIView"
-- !private "AVMediaTypeVideo"
 - !private "=="
 - "AVMetadataObjectTypeCode128Code"
+- "PlayerQRCodeViewController"
+- "AVMetadataObjectTypeQRCode"
+- !private "UIColor"
 - !private "AVMetadataMachineReadableCodeObject"
+- "AVMetadataObjectTypeCode39Code"
+- "AVCaptureMetadataOutputObjectsDelegate"
+- "AnyObject"
 - "AVCaptureVideoPreviewLayer"
 - "AVMetadataObjectTypeUPCECode"
-- "PlayerQRCodeViewController"
-- "PlayerQRCodeViewControllerDelegate"
 - !private "AVCaptureDeviceInput"
-- "UIViewController"
 - "AVMetadataObjectTypeCode93Code"
-- !private "AVLayerVideoGravityResizeAspectFill"
-- !private "CGRectZero"
-- "String"
-- "UIImageView"
-- "AVMetadataObjectTypeAztecCode"
-- !private "AVCaptureMetadataOutput"
-- "AVMetadataObjectTypePDF417Code"
-- !private "print"
-- "AVMetadataObjectTypeEAN13Code"
+- "UIView"
 - !private "dispatch_get_main_queue"
+- !private "print"
+- "AVMetadataObjectTypePDF417Code"
+- "Array"
+- "AVCaptureConnection"
+- "String"
+- "AVMetadataObjectTypeAztecCode"
+- !private "StringLiteralType"
+- "AVMetadataObjectTypeEAN13Code"
+- !private "AVCaptureMetadataOutput"
+- !private "CGRectZero"
+- !private "||"
+- !private "!="
+- "AVCaptureOutput"
+- !private "AVMediaTypeVideo"
+- !private "AVLayerVideoGravityResizeAspectFill"
+- !private "AVCaptureDevice"
+- "UIViewController"
+- "PlayerQRCodeViewControllerDelegate"
+- "UIImageView"
 depends-member:
 - !private ["CSo15AVCaptureDevice", "defaultDeviceWithMediaType"]
 - !private ["CSo20AVCaptureDeviceInput", "init"]
@@ -151,7 +150,6 @@ depends-member:
 - !private ["PSs9AnyObject", "metadataObjectTypes"]
 - !private ["PSs9AnyObject", "performSegueWithIdentifier"]
 - !private ["PSs9AnyObject", "print"]
-- ["PSs9AnyObject", "qrButtonDidTouch"]
 - ["PSs9AnyObject", "qrCodeFrameView"]
 - !private ["PSs9AnyObject", "setMetadataObjectsDelegate"]
 - !private ["PSs9AnyObject", "startRunning"]
@@ -251,7 +249,6 @@ depends-member:
 - !private ["PSs11CVarArgType", "metadataObjectTypes"]
 - !private ["PSs11CVarArgType", "performSegueWithIdentifier"]
 - !private ["PSs11CVarArgType", "print"]
-- ["PSs11CVarArgType", "qrButtonDidTouch"]
 - ["PSs11CVarArgType", "qrCodeFrameView"]
 - !private ["PSs11CVarArgType", "setMetadataObjectsDelegate"]
 - !private ["PSs11CVarArgType", "startRunning"]
@@ -335,7 +332,6 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "metadataObjectTypes"]
 - !private ["PSs23CustomStringConvertible", "performSegueWithIdentifier"]
 - !private ["PSs23CustomStringConvertible", "print"]
-- ["PSs23CustomStringConvertible", "qrButtonDidTouch"]
 - ["PSs23CustomStringConvertible", "qrCodeFrameView"]
 - !private ["PSs23CustomStringConvertible", "setMetadataObjectsDelegate"]
 - !private ["PSs23CustomStringConvertible", "startRunning"]
@@ -394,7 +390,6 @@ depends-member:
 - !private ["PSs9Equatable", "metadataObjectTypes"]
 - !private ["PSs9Equatable", "performSegueWithIdentifier"]
 - !private ["PSs9Equatable", "print"]
-- ["PSs9Equatable", "qrButtonDidTouch"]
 - ["PSs9Equatable", "qrCodeFrameView"]
 - !private ["PSs9Equatable", "setMetadataObjectsDelegate"]
 - !private ["PSs9Equatable", "startRunning"]
@@ -455,7 +450,6 @@ depends-member:
 - !private ["PSs8Hashable", "metadataObjectTypes"]
 - !private ["PSs8Hashable", "performSegueWithIdentifier"]
 - !private ["PSs8Hashable", "print"]
-- ["PSs8Hashable", "qrButtonDidTouch"]
 - ["PSs8Hashable", "qrCodeFrameView"]
 - !private ["PSs8Hashable", "setMetadataObjectsDelegate"]
 - !private ["PSs8Hashable", "startRunning"]
@@ -550,7 +544,6 @@ depends-member:
 - !private ["PSo8NSCoding", "layer"]
 - !private ["PSo8NSCoding", "performSegueWithIdentifier"]
 - !private ["PSo8NSCoding", "print"]
-- ["PSo8NSCoding", "qrButtonDidTouch"]
 - ["PSo8NSCoding", "qrCodeFrameView"]
 - ["PSo8NSCoding", "supportedBarCodes"]
 - !private ["PSo8NSCoding", "transformedMetadataObjectForMetadataObject"]
@@ -589,7 +582,6 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "performSegueWithIdentifier"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
-- ["PSo26NSExtensionRequestHandling", "qrButtonDidTouch"]
 - ["PSo26NSExtensionRequestHandling", "qrCodeFrameView"]
 - ["PSo26NSExtensionRequestHandling", "supportedBarCodes"]
 - ["PSo26NSExtensionRequestHandling", "videoPreviewLayer"]
@@ -644,7 +636,6 @@ depends-member:
 - !private ["CSo8NSObject", "metadataObjectTypes"]
 - !private ["CSo8NSObject", "performSegueWithIdentifier"]
 - !private ["CSo8NSObject", "print"]
-- ["CSo8NSObject", "qrButtonDidTouch"]
 - ["CSo8NSObject", "qrCodeFrameView"]
 - !private ["CSo8NSObject", "setMetadataObjectsDelegate"]
 - !private ["CSo8NSObject", "startRunning"]
@@ -698,7 +689,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "metadataObjectTypes"]
 - !private ["PSo16NSObjectProtocol", "performSegueWithIdentifier"]
 - !private ["PSo16NSObjectProtocol", "print"]
-- ["PSo16NSObjectProtocol", "qrButtonDidTouch"]
 - ["PSo16NSObjectProtocol", "qrCodeFrameView"]
 - !private ["PSo16NSObjectProtocol", "setMetadataObjectsDelegate"]
 - !private ["PSo16NSObjectProtocol", "startRunning"]
@@ -751,7 +741,6 @@ depends-member:
 - ["C8NekoKari26PlayerQRCodeViewController", "init"]
 - !private ["C8NekoKari26PlayerQRCodeViewController", "performSegueWithIdentifier"]
 - !private ["C8NekoKari26PlayerQRCodeViewController", "print"]
-- ["C8NekoKari26PlayerQRCodeViewController", "qrButtonDidTouch"]
 - ["C8NekoKari26PlayerQRCodeViewController", "qrCodeFrameView"]
 - ["C8NekoKari26PlayerQRCodeViewController", "supportedBarCodes"]
 - ["C8NekoKari26PlayerQRCodeViewController", "videoPreviewLayer"]
@@ -832,7 +821,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "layer"]
 - !private ["PSo21UIAppearanceContainer", "performSegueWithIdentifier"]
 - !private ["PSo21UIAppearanceContainer", "print"]
-- ["PSo21UIAppearanceContainer", "qrButtonDidTouch"]
 - ["PSo21UIAppearanceContainer", "qrCodeFrameView"]
 - ["PSo21UIAppearanceContainer", "supportedBarCodes"]
 - ["PSo21UIAppearanceContainer", "videoPreviewLayer"]
@@ -869,7 +857,6 @@ depends-member:
 - ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "performSegueWithIdentifier"]
 - !private ["PSo18UIContentContainer", "print"]
-- ["PSo18UIContentContainer", "qrButtonDidTouch"]
 - ["PSo18UIContentContainer", "qrCodeFrameView"]
 - ["PSo18UIContentContainer", "supportedBarCodes"]
 - ["PSo18UIContentContainer", "videoPreviewLayer"]
@@ -918,7 +905,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "layer"]
 - !private ["PSo18UIFocusEnvironment", "performSegueWithIdentifier"]
 - !private ["PSo18UIFocusEnvironment", "print"]
-- ["PSo18UIFocusEnvironment", "qrButtonDidTouch"]
 - ["PSo18UIFocusEnvironment", "qrCodeFrameView"]
 - ["PSo18UIFocusEnvironment", "supportedBarCodes"]
 - ["PSo18UIFocusEnvironment", "videoPreviewLayer"]
@@ -964,7 +950,6 @@ depends-member:
 - !private ["CSo11UIResponder", "layer"]
 - !private ["CSo11UIResponder", "performSegueWithIdentifier"]
 - !private ["CSo11UIResponder", "print"]
-- ["CSo11UIResponder", "qrButtonDidTouch"]
 - ["CSo11UIResponder", "qrCodeFrameView"]
 - ["CSo11UIResponder", "supportedBarCodes"]
 - ["CSo11UIResponder", "videoPreviewLayer"]
@@ -998,7 +983,6 @@ depends-member:
 - ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "performSegueWithIdentifier"]
 - !private ["PSo16UIStateRestoring", "print"]
-- ["PSo16UIStateRestoring", "qrButtonDidTouch"]
 - ["PSo16UIStateRestoring", "qrCodeFrameView"]
 - ["PSo16UIStateRestoring", "supportedBarCodes"]
 - ["PSo16UIStateRestoring", "videoPreviewLayer"]
@@ -1037,7 +1021,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "layer"]
 - !private ["PSo18UITraitEnvironment", "performSegueWithIdentifier"]
 - !private ["PSo18UITraitEnvironment", "print"]
-- ["PSo18UITraitEnvironment", "qrButtonDidTouch"]
 - ["PSo18UITraitEnvironment", "qrCodeFrameView"]
 - ["PSo18UITraitEnvironment", "supportedBarCodes"]
 - ["PSo18UITraitEnvironment", "videoPreviewLayer"]
@@ -1083,7 +1066,6 @@ depends-member:
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "performSegueWithIdentifier"]
 - !private ["CSo16UIViewController", "print"]
-- ["CSo16UIViewController", "qrButtonDidTouch"]
 - ["CSo16UIViewController", "qrCodeFrameView"]
 - ["CSo16UIViewController", "supportedBarCodes"]
 - ["CSo16UIViewController", "videoPreviewLayer"]
@@ -1269,4 +1251,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
-interface-hash: "6a455c12637d65a3abdadaf474908c7f"
+interface-hash: "d63507e96df52d5fdff8eae0ea79e44c"

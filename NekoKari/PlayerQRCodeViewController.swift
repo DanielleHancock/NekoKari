@@ -17,10 +17,6 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
 
     weak var delegate:PlayerQRCodeViewControllerDelegate?
     
-    @IBAction func qrButtonDidTouch(sender: AnyObject) {
-        performSegueWithIdentifier("qrToFoundCat", sender: self)
-    }
-    
   
     @IBAction func backToFindCatPageDidTouch(sender: AnyObject) {
         performSegueWithIdentifier("qrToPlayer", sender: self)
@@ -124,29 +120,31 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
                // messageLabel.text = "Dectected"
                 if metadataObj.stringValue == "Snowball" {
                     delegate?.foundCatName(self, catName: "Snowball")
-                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
                 }
                 else if metadataObj.stringValue == "Smokey" {
                     delegate?.foundCatName(self, catName: "Smokey")
-                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
                 }
                 else if metadataObj.stringValue == "Shadow" {
                     delegate?.foundCatName(self, catName: "Shadow")
-                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
                 }
                 else if metadataObj.stringValue == "Spots" {
                     delegate?.foundCatName(self, catName: "Spots")
-                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
                 }
                 else if metadataObj.stringValue == "Sunny" {
                     delegate?.foundCatName(self, catName: "Sunny")
-                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
 
                 }
                 
             }
         }
     }
+    
+   
     
   
 

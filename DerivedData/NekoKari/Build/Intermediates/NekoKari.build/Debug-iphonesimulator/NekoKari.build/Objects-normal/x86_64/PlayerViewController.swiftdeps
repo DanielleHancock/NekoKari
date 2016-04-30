@@ -6,66 +6,65 @@ provides-nominal:
 provides-member:
 - ["C8NekoKari20PlayerViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "viewWillAppear"
+- "logOutButtonDidTouch"
+- "red"
+- "calculateCat"
+- "foundCatButtonDidTouch"
+- "lookingForCatLat"
+- "blue"
+- "admin"
 - "viewDidAppear"
-- "catLatitude"
+- "viewWillDisappear"
+- "viewWillAppear"
 - "colorSignal"
 - "locationManager"
 - "locationManager"
-- "ref"
 - "longitude"
-- "blue"
-- "foundCatButtonDidTouch"
-- "logOutButtonDidTouch"
-- "admin"
-- "red"
-- "catLongitude"
-- "lookingForCatLong"
-- "previousLocation"
-- "viewWillDisappear"
-- "catBookButtonDidTouch"
-- "signal"
-- "didReceiveMemoryWarning"
-- "lookingForCatLat"
+- "ref"
 - "userid"
+- "catLongitude"
+- "catLatitude"
+- "signal"
+- "catBookButtonDidTouch"
 - "green"
 - "latitude"
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "previousLocation"
+- "lookingForCatLong"
 depends-top-level:
 - "StringLiteralType"
-- !private "<"
-- !private "String"
-- "PlayerViewController"
-- !private "..."
-- "ExtendedGraphemeClusterType"
+- "UIViewController"
+- "UnicodeScalarType"
 - !private "!="
-- "AnyObject"
-- "Firebase"
+- !private "UIColor"
 - "CLLocationManager"
 - !private "print"
-- !private "abs"
+- "MKMapViewDelegate"
 - !private "+"
-- !private "=="
 - !private "kCLLocationAccuracyBest"
-- "/"
+- "CLLocationManagerDelegate"
+- "Double"
 - "Bool"
+- "/"
+- !private "abs"
+- !private "String"
 - !private "-"
+- !private "<="
+- !private "=="
+- !private "..."
+- "AnyObject"
+- "ExtendedGraphemeClusterType"
+- "Firebase"
+- "UILabel"
 - !private "||"
 - "UIImageView"
 - "CGFloat"
-- "UILabel"
+- "PlayerViewController"
 - "CLLocation"
-- !private "UIColor"
-- "UIViewController"
-- !private "<="
-- "MKMapViewDelegate"
-- "CLLocationManagerDelegate"
-- "Double"
-- "UnicodeScalarType"
 depends-member:
 - !private ["PSs16AbsoluteValuable", "IntegerLiteralType"]
 - !private ["PSs16AbsoluteValuable", "Stride"]
-- !private ["PSs16AbsoluteValuable", "_DisallowMixedSignArithmetic"]
 - !private ["PSs16AbsoluteValuable", "init"]
 - !private ["CSs12AnyGenerator", "Element"]
 - !private ["PSs9AnyObject", "CLLocationManager"]
@@ -79,6 +78,7 @@ depends-member:
 - !private ["PSs9AnyObject", "authorizationStatus"]
 - !private ["PSs9AnyObject", "backgroundColor"]
 - ["PSs9AnyObject", "blue"]
+- ["PSs9AnyObject", "calculateCat"]
 - ["PSs9AnyObject", "catBookButtonDidTouch"]
 - ["PSs9AnyObject", "catLatitude"]
 - ["PSs9AnyObject", "catLongitude"]
@@ -169,7 +169,6 @@ depends-member:
 - !private ["PSs22BidirectionalIndexType", "Stride"]
 - !private ["PSs22BidirectionalIndexType", "_DisabledRangeIndex"]
 - !private ["PSs22BidirectionalIndexType", "_DisallowMixedSignArithmetic"]
-- !private ["OSs3Bit", "deinit"]
 - !private ["PSs21BitwiseOperationsType", "Distance"]
 - !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["PSs21BitwiseOperationsType", "Stride"]
@@ -204,6 +203,7 @@ depends-member:
 - !private ["PSo25CLLocationManagerDelegate", "UIColor"]
 - !private ["PSo25CLLocationManagerDelegate", "abs"]
 - !private ["PSo25CLLocationManagerDelegate", "admin"]
+- !private ["PSo25CLLocationManagerDelegate", "calculateCat"]
 - !private ["PSo25CLLocationManagerDelegate", "catLatitude"]
 - !private ["PSo25CLLocationManagerDelegate", "catLongitude"]
 - !private ["PSo25CLLocationManagerDelegate", "colorSignal"]
@@ -245,6 +245,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "authorizationStatus"]
 - !private ["PSs11CVarArgType", "backgroundColor"]
 - ["PSs11CVarArgType", "blue"]
+- ["PSs11CVarArgType", "calculateCat"]
 - ["PSs11CVarArgType", "catBookButtonDidTouch"]
 - ["PSs11CVarArgType", "catLatitude"]
 - ["PSs11CVarArgType", "catLongitude"]
@@ -363,6 +364,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "authorizationStatus"]
 - !private ["PSs23CustomStringConvertible", "backgroundColor"]
 - ["PSs23CustomStringConvertible", "blue"]
+- ["PSs23CustomStringConvertible", "calculateCat"]
 - ["PSs23CustomStringConvertible", "catBookButtonDidTouch"]
 - ["PSs23CustomStringConvertible", "catLatitude"]
 - ["PSs23CustomStringConvertible", "catLongitude"]
@@ -422,10 +424,8 @@ depends-member:
 - ["PSs23CustomStringConvertible", "viewWillAppear"]
 - ["PSs23CustomStringConvertible", "viewWillDisappear"]
 - ["PSs23CustomStringConvertible", ""]
-- !private ["VSs15DictionaryIndex", "deinit"]
 - !private ["Sd", "IntegerLiteralType"]
 - !private ["Sd", "Stride"]
-- !private ["Sd", "_DisallowMixedSignArithmetic"]
 - !private ["Sd", "deinit"]
 - !private ["Sd", "init"]
 - !private ["PSs9Equatable", "AuthorizedWhenInUse"]
@@ -450,6 +450,7 @@ depends-member:
 - !private ["PSs9Equatable", "authorizationStatus"]
 - !private ["PSs9Equatable", "backgroundColor"]
 - ["PSs9Equatable", "blue"]
+- ["PSs9Equatable", "calculateCat"]
 - ["PSs9Equatable", "catBookButtonDidTouch"]
 - ["PSs9Equatable", "catLatitude"]
 - ["PSs9Equatable", "catLongitude"]
@@ -519,15 +520,17 @@ depends-member:
 - !private ["CSo8Firebase", "childByAppendingPath"]
 - ["CSo8Firebase", "init"]
 - !private ["CSo8Firebase", "observeAuthEventWithBlock"]
+- !private ["Sf", "IntegerLiteralType"]
+- !private ["Sf", "Stride"]
+- !private ["Sf", "deinit"]
 - !private ["VSs7Float80", "IntegerLiteralType"]
+- !private ["VSs7Float80", "Stride"]
 - !private ["VSs7Float80", "deinit"]
 - !private ["PSs23FloatLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs23FloatLiteralConvertible", "Stride"]
-- !private ["PSs23FloatLiteralConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["PSs23FloatLiteralConvertible", "init"]
 - !private ["PSs17FloatingPointType", "IntegerLiteralType"]
 - !private ["PSs17FloatingPointType", "Stride"]
-- !private ["PSs17FloatingPointType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs17FloatingPointType", "init"]
 - !private ["PSs16ForwardIndexType", "Distance"]
 - !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
@@ -556,6 +559,7 @@ depends-member:
 - !private ["PSs8Hashable", "authorizationStatus"]
 - !private ["PSs8Hashable", "backgroundColor"]
 - ["PSs8Hashable", "blue"]
+- ["PSs8Hashable", "calculateCat"]
 - ["PSs8Hashable", "catBookButtonDidTouch"]
 - ["PSs8Hashable", "catLatitude"]
 - ["PSs8Hashable", "catLongitude"]
@@ -613,9 +617,6 @@ depends-member:
 - ["PSs8Hashable", ""]
 - ["SQ", "deinit"]
 - !private ["VVSS13CharacterView5Index", "Distance"]
-- !private ["VVSS13CharacterView5Index", "deinit"]
-- !private ["VVSS17UnicodeScalarView5Index", "deinit"]
-- !private ["VVSS9UTF16View5Index", "deinit"]
 - !private ["PSs9Indexable", "Generator"]
 - !private ["PSs9Indexable", "Index"]
 - !private ["PSs9Indexable", "IntegerLiteralType"]
@@ -632,9 +633,21 @@ depends-member:
 - !private ["VSs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
+- !private ["Si", "deinit"]
+- !private ["VSs5Int16", "IntegerLiteralType"]
+- !private ["VSs5Int16", "Stride"]
+- !private ["VSs5Int16", "deinit"]
+- !private ["VSs5Int32", "IntegerLiteralType"]
+- !private ["VSs5Int32", "Stride"]
 - !private ["VSs5Int32", "deinit"]
+- !private ["VSs5Int64", "IntegerLiteralType"]
+- !private ["VSs5Int64", "Stride"]
+- !private ["VSs5Int64", "deinit"]
 - !private ["VSs4Int8", "IntegerLiteralType"]
+- !private ["VSs4Int8", "Stride"]
+- !private ["VSs4Int8", "deinit"]
 - !private ["PSs21IntegerArithmeticType", "Distance"]
 - !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs21IntegerArithmeticType", "Stride"]
@@ -658,6 +671,7 @@ depends-member:
 - !private ["PSo17MKMapViewDelegate", "UIColor"]
 - !private ["PSo17MKMapViewDelegate", "abs"]
 - !private ["PSo17MKMapViewDelegate", "admin"]
+- !private ["PSo17MKMapViewDelegate", "calculateCat"]
 - !private ["PSo17MKMapViewDelegate", "catLatitude"]
 - !private ["PSo17MKMapViewDelegate", "catLongitude"]
 - !private ["PSo17MKMapViewDelegate", "colorSignal"]
@@ -686,6 +700,7 @@ depends-member:
 - ["PSo17MKMapViewDelegate", ""]
 - !private ["PSs14MirrorPathType", "Distance"]
 - !private ["PSs14MirrorPathType", "IntegerLiteralType"]
+- !private ["PSs14MirrorPathType", "Stride"]
 - !private ["PSs14MirrorPathType", "_DisabledRangeIndex"]
 - !private ["PSs14MirrorPathType", "characters"]
 - !private ["PSs14MirrorPathType", "init"]
@@ -734,6 +749,7 @@ depends-member:
 - ["PSo8NSCoding", "admin"]
 - !private ["PSo8NSCoding", "backgroundColor"]
 - ["PSo8NSCoding", "blue"]
+- ["PSo8NSCoding", "calculateCat"]
 - ["PSo8NSCoding", "catBookButtonDidTouch"]
 - ["PSo8NSCoding", "catLatitude"]
 - ["PSo8NSCoding", "catLongitude"]
@@ -790,6 +806,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "abs"]
 - ["PSo26NSExtensionRequestHandling", "admin"]
 - ["PSo26NSExtensionRequestHandling", "blue"]
+- ["PSo26NSExtensionRequestHandling", "calculateCat"]
 - ["PSo26NSExtensionRequestHandling", "catBookButtonDidTouch"]
 - ["PSo26NSExtensionRequestHandling", "catLatitude"]
 - ["PSo26NSExtensionRequestHandling", "catLongitude"]
@@ -846,6 +863,7 @@ depends-member:
 - !private ["CSo8NSObject", "authorizationStatus"]
 - !private ["CSo8NSObject", "backgroundColor"]
 - ["CSo8NSObject", "blue"]
+- ["CSo8NSObject", "calculateCat"]
 - ["CSo8NSObject", "catBookButtonDidTouch"]
 - ["CSo8NSObject", "catLatitude"]
 - ["CSo8NSObject", "catLongitude"]
@@ -911,6 +929,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "authorizationStatus"]
 - !private ["PSo16NSObjectProtocol", "backgroundColor"]
 - ["PSo16NSObjectProtocol", "blue"]
+- ["PSo16NSObjectProtocol", "calculateCat"]
 - ["PSo16NSObjectProtocol", "catBookButtonDidTouch"]
 - ["PSo16NSObjectProtocol", "catLatitude"]
 - ["PSo16NSObjectProtocol", "catLongitude"]
@@ -972,10 +991,7 @@ depends-member:
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "characters"]
 - !private ["PSs21NilLiteralConvertible", "Some"]
-- !private ["PSs21NilLiteralConvertible", "Stride"]
-- !private ["VSs16ObjectIdentifier", "deinit"]
 - !private ["Sq", "Some"]
-- !private ["Sq", "Stride"]
 - !private ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "characters"]
 - !private ["PSs16OutputStreamType", "init"]
@@ -993,6 +1009,7 @@ depends-member:
 - !private ["C8NekoKari20PlayerViewController", "abs"]
 - ["C8NekoKari20PlayerViewController", "admin"]
 - ["C8NekoKari20PlayerViewController", "blue"]
+- ["C8NekoKari20PlayerViewController", "calculateCat"]
 - ["C8NekoKari20PlayerViewController", "catBookButtonDidTouch"]
 - ["C8NekoKari20PlayerViewController", "catLatitude"]
 - ["C8NekoKari20PlayerViewController", "catLongitude"]
@@ -1071,15 +1088,14 @@ depends-member:
 - !private ["PSs12SequenceType", "map"]
 - !private ["PSs12SequenceType", "split"]
 - !private ["PSs12SequenceType", "subscript"]
-- !private ["VSs8SetIndex", "deinit"]
 - !private ["PSs17SignedIntegerType", "Distance"]
 - !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
+- !private ["PSs17SignedIntegerType", "Stride"]
 - !private ["PSs17SignedIntegerType", "_DisabledRangeIndex"]
 - !private ["PSs16SignedNumberType", "Distance"]
 - !private ["PSs16SignedNumberType", "IntegerLiteralType"]
 - !private ["PSs16SignedNumberType", "Stride"]
 - !private ["PSs16SignedNumberType", "_DisabledRangeIndex"]
-- !private ["PSs16SignedNumberType", "_DisallowMixedSignArithmetic"]
 - !private ["PSs16SignedNumberType", "init"]
 - !private ["VSs5Slice", "Generator"]
 - !private ["VSs5Slice", "Index"]
@@ -1113,6 +1129,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "admin"]
 - !private ["PSo21UIAppearanceContainer", "backgroundColor"]
 - ["PSo21UIAppearanceContainer", "blue"]
+- ["PSo21UIAppearanceContainer", "calculateCat"]
 - ["PSo21UIAppearanceContainer", "catBookButtonDidTouch"]
 - ["PSo21UIAppearanceContainer", "catLatitude"]
 - ["PSo21UIAppearanceContainer", "catLongitude"]
@@ -1162,6 +1179,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "abs"]
 - ["PSo18UIContentContainer", "admin"]
 - ["PSo18UIContentContainer", "blue"]
+- ["PSo18UIContentContainer", "calculateCat"]
 - ["PSo18UIContentContainer", "catBookButtonDidTouch"]
 - ["PSo18UIContentContainer", "catLatitude"]
 - ["PSo18UIContentContainer", "catLongitude"]
@@ -1214,6 +1232,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "admin"]
 - !private ["PSo18UIFocusEnvironment", "backgroundColor"]
 - ["PSo18UIFocusEnvironment", "blue"]
+- ["PSo18UIFocusEnvironment", "calculateCat"]
 - ["PSo18UIFocusEnvironment", "catBookButtonDidTouch"]
 - ["PSo18UIFocusEnvironment", "catLatitude"]
 - ["PSo18UIFocusEnvironment", "catLongitude"]
@@ -1271,6 +1290,7 @@ depends-member:
 - ["CSo11UIResponder", "admin"]
 - !private ["CSo11UIResponder", "backgroundColor"]
 - ["CSo11UIResponder", "blue"]
+- ["CSo11UIResponder", "calculateCat"]
 - ["CSo11UIResponder", "catBookButtonDidTouch"]
 - ["CSo11UIResponder", "catLatitude"]
 - ["CSo11UIResponder", "catLongitude"]
@@ -1318,6 +1338,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "abs"]
 - ["PSo16UIStateRestoring", "admin"]
 - ["PSo16UIStateRestoring", "blue"]
+- ["PSo16UIStateRestoring", "calculateCat"]
 - ["PSo16UIStateRestoring", "catBookButtonDidTouch"]
 - ["PSo16UIStateRestoring", "catLatitude"]
 - ["PSo16UIStateRestoring", "catLongitude"]
@@ -1366,6 +1387,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "admin"]
 - !private ["PSo18UITraitEnvironment", "backgroundColor"]
 - ["PSo18UITraitEnvironment", "blue"]
+- ["PSo18UITraitEnvironment", "calculateCat"]
 - ["PSo18UITraitEnvironment", "catBookButtonDidTouch"]
 - ["PSo18UITraitEnvironment", "catLatitude"]
 - ["PSo18UITraitEnvironment", "catLongitude"]
@@ -1422,6 +1444,7 @@ depends-member:
 - !private ["CSo16UIViewController", "abs"]
 - ["CSo16UIViewController", "admin"]
 - ["CSo16UIViewController", "blue"]
+- ["CSo16UIViewController", "calculateCat"]
 - ["CSo16UIViewController", "catBookButtonDidTouch"]
 - ["CSo16UIViewController", "catLatitude"]
 - ["CSo16UIViewController", "catLongitude"]
@@ -1461,16 +1484,28 @@ depends-member:
 - ["CSo16UIViewController", "viewWillAppear"]
 - ["CSo16UIViewController", "viewWillDisappear"]
 - ["CSo16UIViewController", ""]
+- !private ["Su", "IntegerLiteralType"]
+- !private ["Su", "Stride"]
+- !private ["Su", "_DisallowMixedSignArithmetic"]
+- !private ["Su", "deinit"]
+- !private ["VSs6UInt16", "IntegerLiteralType"]
+- !private ["VSs6UInt16", "Stride"]
+- !private ["VSs6UInt16", "_DisallowMixedSignArithmetic"]
+- !private ["VSs6UInt16", "deinit"]
+- !private ["VSs6UInt32", "IntegerLiteralType"]
+- !private ["VSs6UInt32", "Stride"]
+- !private ["VSs6UInt32", "_DisallowMixedSignArithmetic"]
+- !private ["VSs6UInt32", "deinit"]
+- !private ["VSs6UInt64", "IntegerLiteralType"]
+- !private ["VSs6UInt64", "Stride"]
+- !private ["VSs6UInt64", "_DisallowMixedSignArithmetic"]
+- !private ["VSs6UInt64", "deinit"]
 - !private ["VSs5UInt8", "IntegerLiteralType"]
 - !private ["VSs5UInt8", "Stride"]
 - !private ["VSs5UInt8", "_DisallowMixedSignArithmetic"]
 - !private ["VSs5UInt8", "deinit"]
-- !private ["Sc", "deinit"]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "characters"]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
-- !private ["VSs20UnsafeMutablePointer", "Stride"]
-- !private ["VSs20UnsafeMutablePointer", "deinit"]
-- !private ["VSs13UnsafePointer", "deinit"]
 - !private ["PSs19UnsignedIntegerType", "IntegerLiteralType"]
 - !private ["PSs19UnsignedIntegerType", "Stride"]
 - !private ["PSs19UnsignedIntegerType", "_DisallowMixedSignArithmetic"]
@@ -1491,7 +1526,6 @@ depends-member:
 - !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["PSs31_BuiltinFloatLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs31_BuiltinFloatLiteralConvertible", "Stride"]
-- !private ["PSs31_BuiltinFloatLiteralConvertible", "_DisallowMixedSignArithmetic"]
 - !private ["PSs31_BuiltinFloatLiteralConvertible", "init"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
@@ -1511,7 +1545,6 @@ depends-member:
 - !private ["PSs19_CVarArgAlignedType", "init"]
 - !private ["PSs22_CVarArgPassedAsDouble", "IntegerLiteralType"]
 - !private ["PSs22_CVarArgPassedAsDouble", "Stride"]
-- !private ["PSs22_CVarArgPassedAsDouble", "_DisallowMixedSignArithmetic"]
 - !private ["PSs22_CVarArgPassedAsDouble", "init"]
 - !private ["PSs16_CocoaStringType", "characters"]
 - !private ["PSs24_ColorLiteralConvertible", "init"]
@@ -1561,7 +1594,6 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "map"]
 - !private ["PSs21_ObjectiveCBridgeable", "subscript"]
 - !private ["VSs26_OptionalNilComparisonType", "deinit"]
-- !private ["PSs12_PointerType", "Stride"]
 - !private ["PSs22_RandomAccessAmbiguity", "Distance"]
 - !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["PSs22_RandomAccessAmbiguity", "Stride"]
@@ -1589,6 +1621,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "text"]
 - !private ["PSs18_SignedIntegerType", "Distance"]
 - !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
+- !private ["PSs18_SignedIntegerType", "Stride"]
 - !private ["PSs18_SignedIntegerType", "_DisabledRangeIndex"]
 - !private ["PSs11_Strideable", "Distance"]
 - !private ["PSs11_Strideable", "IntegerLiteralType"]
@@ -1599,7 +1632,6 @@ depends-member:
 - !private ["PSs18_StringElementType", "IntegerLiteralType"]
 - !private ["PSs18_StringElementType", "Stride"]
 - !private ["PSs18_StringElementType", "_DisallowMixedSignArithmetic"]
-- !private ["VSC30_SwiftNSOperatingSystemVersion", "deinit"]
 depends-nominal:
 - !private "PSs16AbsoluteValuable"
 - !private "CSs12AnyGenerator"
@@ -1609,7 +1641,6 @@ depends-nominal:
 - "PSs23ArrayLiteralConvertible"
 - !private "VSs10ArraySlice"
 - !private "PSs22BidirectionalIndexType"
-- !private "OSs3Bit"
 - !private "PSs21BitwiseOperationsType"
 - !private "Sb"
 - !private "PSs25BooleanLiteralConvertible"
@@ -1628,7 +1659,6 @@ depends-nominal:
 - !private "PSs10Comparable"
 - "PSs28CustomDebugStringConvertible"
 - "PSs23CustomStringConvertible"
-- !private "VSs15DictionaryIndex"
 - !private "Sd"
 - "PSs9Equatable"
 - !private "PSs9ErrorType"
@@ -1638,6 +1668,7 @@ depends-nominal:
 - !private "OSC10FEventType"
 - "CSo6FQuery"
 - "CSo8Firebase"
+- !private "Sf"
 - !private "VSs7Float80"
 - !private "PSs23FloatLiteralConvertible"
 - !private "PSs17FloatingPointType"
@@ -1646,12 +1677,12 @@ depends-nominal:
 - "PSs8Hashable"
 - "SQ"
 - !private "VVSS13CharacterView5Index"
-- !private "VVSS17UnicodeScalarView5Index"
-- !private "VVSS9UTF16View5Index"
 - "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
 - !private "Si"
+- !private "VSs5Int16"
 - !private "VSs5Int32"
+- !private "VSs5Int64"
 - !private "VSs4Int8"
 - !private "PSs21IntegerArithmeticType"
 - !private "PSs25IntegerLiteralConvertible"
@@ -1672,7 +1703,6 @@ depends-nominal:
 - !private "PSo14NSSecureCoding"
 - !private "CSo8NSString"
 - !private "PSs21NilLiteralConvertible"
-- !private "VSs16ObjectIdentifier"
 - !private "Sq"
 - !private "PSs16OutputStreamType"
 - "C8NekoKari20PlayerViewController"
@@ -1682,7 +1712,6 @@ depends-nominal:
 - "PSs30RangeReplaceableCollectionType"
 - !private "PSs16RawRepresentable"
 - "PSs12SequenceType"
-- !private "VSs8SetIndex"
 - !private "PSs17SignedIntegerType"
 - !private "PSs16SignedNumberType"
 - !private "VSs5Slice"
@@ -1706,11 +1735,12 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "VSs6UInt16"
+- !private "VSs6UInt32"
+- !private "VSs6UInt64"
 - !private "VSs5UInt8"
-- !private "Sc"
 - !private "PSs31UnicodeScalarLiteralConvertible"
-- !private "VSs20UnsafeMutablePointer"
-- !private "VSs13UnsafePointer"
 - !private "PSs19UnsignedIntegerType"
 - !private "CSs17_AnyGeneratorBase"
 - "PSs10_ArrayType"
@@ -1732,13 +1762,11 @@ depends-nominal:
 - !private "PSs12_IntegerType"
 - "PSs21_ObjectiveCBridgeable"
 - !private "VSs26_OptionalNilComparisonType"
-- !private "PSs12_PointerType"
 - !private "PSs22_RandomAccessAmbiguity"
 - "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"
 - !private "PSs11_Strideable"
 - !private "PSs18_StringElementType"
-- !private "VSC30_SwiftNSOperatingSystemVersion"
 depends-dynamic-lookup:
 - !private "observeEventType"
 depends-external:
@@ -1767,4 +1795,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
-interface-hash: "a8df91791d1cade93dc553ddfc95665f"
+interface-hash: "39daeac02e23b0b89858759d9ea8a811"

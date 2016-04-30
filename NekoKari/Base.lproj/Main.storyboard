@@ -321,13 +321,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzJ-vz-ykB">
-                                <rect key="frame" x="486" y="562" width="102" height="30"/>
-                                <state key="normal" title="Enter QR Code"/>
-                                <connections>
-                                    <action selector="qrButtonDidTouch:" destination="jGC-LU-NSt" eventType="touchUpInside" id="Ias-7k-J6f"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e40-2e-8km">
                                 <rect key="frame" x="12" y="562" width="151" height="30"/>
                                 <constraints>
@@ -359,11 +352,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="e40-2e-8km" firstAttribute="leading" secondItem="eHj-RR-Xkw" secondAttribute="leading" constant="12" id="RMf-O3-znU"/>
-                            <constraint firstAttribute="trailing" secondItem="TzJ-vz-ykB" secondAttribute="trailing" constant="12" id="XBs-hj-zFg"/>
                             <constraint firstItem="5oQ-7R-nbI" firstAttribute="leading" secondItem="eHj-RR-Xkw" secondAttribute="leading" id="f9T-eb-hf4"/>
                             <constraint firstAttribute="trailing" secondItem="5oQ-7R-nbI" secondAttribute="trailing" id="gNZ-8Z-uuH"/>
                             <constraint firstItem="qEW-Z9-TQL" firstAttribute="top" secondItem="e40-2e-8km" secondAttribute="bottom" constant="8" id="oDP-Iw-EXa"/>
-                            <constraint firstAttribute="bottom" secondItem="TzJ-vz-ykB" secondAttribute="bottom" constant="8" id="qDC-Er-Eke"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1188,8 +1179,8 @@
         <image name="nekokarilogodropshadow" width="630" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ba2-qZ-04H"/>
         <segue reference="k0O-Ob-gol"/>
+        <segue reference="eUK-tJ-z3X"/>
         <segue reference="St8-Xy-bTj"/>
     </inferredMetricsTieBreakers>
 </document>
