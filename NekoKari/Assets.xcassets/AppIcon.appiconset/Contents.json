@@ -3,26 +3,44 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "PeachesIcon120x120.png",
+      "filename" : "PeachesIcon29x29.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "PeachesIcon58x58.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "PeachesIcon180x180.png",
+      "filename" : "PeachesIcon87x87.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "PeachesIcon120x120-1.png",
+      "filename" : "PeachesIcon80x80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "PeachesIcon180x180-1.png",
+      "filename" : "PeachesIcon120x120.png",
       "scale" : "3x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "PeachesIcon57x57.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "PeachesIcon114x114.png",
+      "scale" : "2x"
     },
     {
       "size" : "60x60",
@@ -40,5 +58,8 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "pre-rendered" : true
   }
 }

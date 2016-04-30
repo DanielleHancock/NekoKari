@@ -6,55 +6,55 @@ provides-nominal:
 provides-member:
 - ["C8NekoKari26PlayerQRCodeViewController", ""]
 provides-dynamic-lookup:
-- "captureSession"
 - "supportedBarCodes"
 - "captureOutput"
 - "userid"
+- "captureSession"
 - "ref"
-- "didReceiveMemoryWarning"
-- "videoPreviewLayer"
-- "viewDidLoad"
-- "qrCodeFrameView"
 - "cameraViewBounds"
+- "qrCodeFrameView"
 - "backToFindCatPageDidTouch"
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "videoPreviewLayer"
 depends-top-level:
-- "StringLiteralType"
-- "AnyObject"
-- "UIViewController"
-- !private "!="
-- "AVMetadataObjectTypeQRCode"
 - "Array"
-- !private "+"
-- !private "AVMediaTypeVideo"
-- !private "AVMetadataMachineReadableCodeObject"
+- "AVMetadataObjectTypeQRCode"
+- "AnyObject"
 - "AVCaptureSession"
-- "AVMetadataObjectTypeAztecCode"
-- !private "=="
-- !private "print"
-- "UIImageView"
-- !private "Dictionary"
-- "Firebase"
-- "AVCaptureVideoPreviewLayer"
-- "AVCaptureOutput"
-- "AVMetadataObjectTypeUPCECode"
-- !private "CGRectZero"
-- "AVMetadataObjectTypePDF417Code"
+- !private "AVMetadataMachineReadableCodeObject"
+- !private "dispatch_get_main_queue"
+- !private "BooleanLiteralType"
+- !private "AVCaptureDeviceInput"
+- !private "+"
 - !private "AVCaptureDevice"
 - !private "AVLayerVideoGravityResizeAspectFill"
-- "UIView"
-- "AVMetadataObjectTypeEAN13Code"
-- "PlayerQRCodeViewController"
-- !private "UIColor"
-- "AVCaptureConnection"
-- "AVMetadataObjectTypeCode128Code"
-- !private "||"
-- !private "AVCaptureDeviceInput"
-- "AVCaptureMetadataOutputObjectsDelegate"
-- !private "dispatch_get_main_queue"
-- "AVMetadataObjectTypeCode39Code"
-- !private "BooleanLiteralType"
+- "Firebase"
 - !private "AVCaptureMetadataOutput"
+- !private "print"
+- "AVMetadataObjectTypeEAN13Code"
+- !private "Dictionary"
+- "AVCaptureConnection"
+- "AVMetadataObjectTypeAztecCode"
+- "AVMetadataObjectTypePDF417Code"
+- "AVCaptureMetadataOutputObjectsDelegate"
+- "UIView"
+- "AVMetadataObjectTypeUPCECode"
+- "StringLiteralType"
+- "PlayerQRCodeViewController"
 - "AVMetadataObjectTypeCode93Code"
+- "AVCaptureVideoPreviewLayer"
+- !private "CGRectZero"
+- "AVCaptureOutput"
+- !private "AVMediaTypeVideo"
+- "AVMetadataObjectTypeCode39Code"
+- !private "!="
+- "UIImageView"
+- !private "||"
+- "UIViewController"
+- !private "=="
+- "AVMetadataObjectTypeCode128Code"
+- !private "UIColor"
 depends-member:
 - !private ["CSo15AVCaptureDevice", "defaultDeviceWithMediaType"]
 - !private ["CSo20AVCaptureDeviceInput", "init"]
@@ -128,10 +128,8 @@ depends-member:
 - !private ["PSs9AnyObject", "CGColor"]
 - !private ["PSs9AnyObject", "CGRectZero"]
 - ["PSs9AnyObject", "Firebase"]
-- !private ["PSs9AnyObject", "Key"]
 - !private ["PSs9AnyObject", "UIColor"]
 - !private ["PSs9AnyObject", "UIView"]
-- !private ["PSs9AnyObject", "Value"]
 - !private ["PSs9AnyObject", "addInput"]
 - !private ["PSs9AnyObject", "addOutput"]
 - !private ["PSs9AnyObject", "addSublayer"]
@@ -160,13 +158,13 @@ depends-member:
 - ["PSs9AnyObject", "qrCodeFrameView"]
 - ["PSs9AnyObject", "ref"]
 - !private ["PSs9AnyObject", "setMetadataObjectsDelegate"]
-- !private ["PSs9AnyObject", "setValue"]
 - !private ["PSs9AnyObject", "startRunning"]
 - !private ["PSs9AnyObject", "stringValue"]
 - ["PSs9AnyObject", "supportedBarCodes"]
 - !private ["PSs9AnyObject", "transformedMetadataObjectForMetadataObject"]
 - !private ["PSs9AnyObject", "type"]
 - !private ["PSs9AnyObject", "uid"]
+- !private ["PSs9AnyObject", "updateChildValues"]
 - ["PSs9AnyObject", "userid"]
 - !private ["PSs9AnyObject", "videoGravity"]
 - ["PSs9AnyObject", "videoPreviewLayer"]
@@ -197,6 +195,7 @@ depends-member:
 - !private ["PSs21BitwiseOperationsType", "Distance"]
 - !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
 - !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
 - !private ["CSo7CALayer", "addSublayer"]
@@ -236,10 +235,8 @@ depends-member:
 - !private ["PSs11CVarArgType", "Distance"]
 - ["PSs11CVarArgType", "Firebase"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
-- !private ["PSs11CVarArgType", "Key"]
 - !private ["PSs11CVarArgType", "UIColor"]
 - !private ["PSs11CVarArgType", "UIView"]
-- !private ["PSs11CVarArgType", "Value"]
 - !private ["PSs11CVarArgType", "addInput"]
 - !private ["PSs11CVarArgType", "addOutput"]
 - !private ["PSs11CVarArgType", "addSublayer"]
@@ -267,13 +264,13 @@ depends-member:
 - ["PSs11CVarArgType", "qrCodeFrameView"]
 - ["PSs11CVarArgType", "ref"]
 - !private ["PSs11CVarArgType", "setMetadataObjectsDelegate"]
-- !private ["PSs11CVarArgType", "setValue"]
 - !private ["PSs11CVarArgType", "startRunning"]
 - !private ["PSs11CVarArgType", "stringValue"]
 - ["PSs11CVarArgType", "supportedBarCodes"]
 - !private ["PSs11CVarArgType", "transformedMetadataObjectForMetadataObject"]
 - !private ["PSs11CVarArgType", "type"]
 - !private ["PSs11CVarArgType", "uid"]
+- !private ["PSs11CVarArgType", "updateChildValues"]
 - ["PSs11CVarArgType", "userid"]
 - !private ["PSs11CVarArgType", "videoGravity"]
 - ["PSs11CVarArgType", "videoPreviewLayer"]
@@ -362,7 +359,6 @@ depends-member:
 - ["PSs23CustomStringConvertible", "qrCodeFrameView"]
 - ["PSs23CustomStringConvertible", "ref"]
 - !private ["PSs23CustomStringConvertible", "setMetadataObjectsDelegate"]
-- !private ["PSs23CustomStringConvertible", "setValue"]
 - !private ["PSs23CustomStringConvertible", "startRunning"]
 - !private ["PSs23CustomStringConvertible", "stringValue"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
@@ -370,6 +366,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "transformedMetadataObjectForMetadataObject"]
 - !private ["PSs23CustomStringConvertible", "type"]
 - !private ["PSs23CustomStringConvertible", "uid"]
+- !private ["PSs23CustomStringConvertible", "updateChildValues"]
 - ["PSs23CustomStringConvertible", "userid"]
 - !private ["PSs23CustomStringConvertible", "videoGravity"]
 - ["PSs23CustomStringConvertible", "videoPreviewLayer"]
@@ -378,7 +375,6 @@ depends-member:
 - ["PSs23CustomStringConvertible", ""]
 - !private ["VSs10Dictionary", "Key"]
 - !private ["VSs10Dictionary", "Value"]
-- !private ["VSs10Dictionary", "deinit"]
 - !private ["PSs28DictionaryLiteralConvertible", "Key"]
 - !private ["PSs28DictionaryLiteralConvertible", "Value"]
 - !private ["PSs9Equatable", "AVCaptureDevice"]
@@ -401,10 +397,8 @@ depends-member:
 - !private ["PSs9Equatable", "Distance"]
 - ["PSs9Equatable", "Firebase"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
-- !private ["PSs9Equatable", "Key"]
 - !private ["PSs9Equatable", "UIColor"]
 - !private ["PSs9Equatable", "UIView"]
-- !private ["PSs9Equatable", "Value"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - !private ["PSs9Equatable", "addInput"]
 - !private ["PSs9Equatable", "addOutput"]
@@ -433,13 +427,13 @@ depends-member:
 - ["PSs9Equatable", "qrCodeFrameView"]
 - ["PSs9Equatable", "ref"]
 - !private ["PSs9Equatable", "setMetadataObjectsDelegate"]
-- !private ["PSs9Equatable", "setValue"]
 - !private ["PSs9Equatable", "startRunning"]
 - !private ["PSs9Equatable", "stringValue"]
 - ["PSs9Equatable", "supportedBarCodes"]
 - !private ["PSs9Equatable", "transformedMetadataObjectForMetadataObject"]
 - !private ["PSs9Equatable", "type"]
 - !private ["PSs9Equatable", "uid"]
+- !private ["PSs9Equatable", "updateChildValues"]
 - ["PSs9Equatable", "userid"]
 - !private ["PSs9Equatable", "videoGravity"]
 - ["PSs9Equatable", "videoPreviewLayer"]
@@ -451,11 +445,11 @@ depends-member:
 - !private ["CSo6FQuery", "childByAppendingPath"]
 - ["CSo6FQuery", "init"]
 - !private ["CSo6FQuery", "observeAuthEventWithBlock"]
-- !private ["CSo6FQuery", "setValue"]
+- !private ["CSo6FQuery", "updateChildValues"]
 - !private ["CSo8Firebase", "childByAppendingPath"]
 - ["CSo8Firebase", "init"]
 - !private ["CSo8Firebase", "observeAuthEventWithBlock"]
-- !private ["CSo8Firebase", "setValue"]
+- !private ["CSo8Firebase", "updateChildValues"]
 - !private ["PSs16ForwardIndexType", "Distance"]
 - !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
 - !private ["PSs13GeneratorType", "Element"]
@@ -479,10 +473,8 @@ depends-member:
 - !private ["PSs8Hashable", "Distance"]
 - ["PSs8Hashable", "Firebase"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
-- !private ["PSs8Hashable", "Key"]
 - !private ["PSs8Hashable", "UIColor"]
 - !private ["PSs8Hashable", "UIView"]
-- !private ["PSs8Hashable", "Value"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - !private ["PSs8Hashable", "addInput"]
 - !private ["PSs8Hashable", "addOutput"]
@@ -511,13 +503,13 @@ depends-member:
 - ["PSs8Hashable", "qrCodeFrameView"]
 - ["PSs8Hashable", "ref"]
 - !private ["PSs8Hashable", "setMetadataObjectsDelegate"]
-- !private ["PSs8Hashable", "setValue"]
 - !private ["PSs8Hashable", "startRunning"]
 - !private ["PSs8Hashable", "stringValue"]
 - ["PSs8Hashable", "supportedBarCodes"]
 - !private ["PSs8Hashable", "transformedMetadataObjectForMetadataObject"]
 - !private ["PSs8Hashable", "type"]
 - !private ["PSs8Hashable", "uid"]
+- !private ["PSs8Hashable", "updateChildValues"]
 - ["PSs8Hashable", "userid"]
 - !private ["PSs8Hashable", "videoGravity"]
 - ["PSs8Hashable", "videoPreviewLayer"]
@@ -588,10 +580,8 @@ depends-member:
 - !private ["PSo8NSCoding", "CGColor"]
 - !private ["PSo8NSCoding", "CGRectZero"]
 - ["PSo8NSCoding", "Firebase"]
-- !private ["PSo8NSCoding", "Key"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UIView"]
-- !private ["PSo8NSCoding", "Value"]
 - !private ["PSo8NSCoding", "addSublayer"]
 - !private ["PSo8NSCoding", "addSubview"]
 - ["PSo8NSCoding", "backToFindCatPageDidTouch"]
@@ -621,11 +611,7 @@ depends-member:
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "CGColor"]
-- !private ["PSo9NSCopying", "Key"]
-- !private ["PSo9NSCopying", "Value"]
 - !private ["PSo9NSCopying", "greenColor"]
-- !private ["CSo12NSDictionary", "Key"]
-- !private ["CSo12NSDictionary", "Value"]
 - !private ["PSo26NSExtensionRequestHandling", "AVCaptureDevice"]
 - !private ["PSo26NSExtensionRequestHandling", "AVCaptureDeviceInput"]
 - !private ["PSo26NSExtensionRequestHandling", "AVCaptureMetadataOutput"]
@@ -662,10 +648,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- !private ["PSo17NSFastEnumeration", "Key"]
-- !private ["PSo17NSFastEnumeration", "Value"]
-- !private ["PSo16NSMutableCopying", "Key"]
-- !private ["PSo16NSMutableCopying", "Value"]
 - ["CSo8NSObject", "AVCaptureConnection"]
 - !private ["CSo8NSObject", "AVCaptureDevice"]
 - !private ["CSo8NSObject", "AVCaptureDeviceInput"]
@@ -688,11 +670,9 @@ depends-member:
 - !private ["CSo8NSObject", "CGColor"]
 - !private ["CSo8NSObject", "CGRectZero"]
 - ["CSo8NSObject", "Firebase"]
-- !private ["CSo8NSObject", "Key"]
 - !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UIImageView"]
 - ["CSo8NSObject", "UIView"]
-- !private ["CSo8NSObject", "Value"]
 - !private ["CSo8NSObject", "addInput"]
 - !private ["CSo8NSObject", "addOutput"]
 - !private ["CSo8NSObject", "addSublayer"]
@@ -721,13 +701,13 @@ depends-member:
 - ["CSo8NSObject", "qrCodeFrameView"]
 - ["CSo8NSObject", "ref"]
 - !private ["CSo8NSObject", "setMetadataObjectsDelegate"]
-- !private ["CSo8NSObject", "setValue"]
 - !private ["CSo8NSObject", "startRunning"]
 - !private ["CSo8NSObject", "stringValue"]
 - ["CSo8NSObject", "supportedBarCodes"]
 - !private ["CSo8NSObject", "transformedMetadataObjectForMetadataObject"]
 - !private ["CSo8NSObject", "type"]
 - !private ["CSo8NSObject", "uid"]
+- !private ["CSo8NSObject", "updateChildValues"]
 - ["CSo8NSObject", "userid"]
 - !private ["CSo8NSObject", "videoGravity"]
 - ["CSo8NSObject", "videoPreviewLayer"]
@@ -751,10 +731,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "CGColor"]
 - !private ["PSo16NSObjectProtocol", "CGRectZero"]
 - ["PSo16NSObjectProtocol", "Firebase"]
-- !private ["PSo16NSObjectProtocol", "Key"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIView"]
-- !private ["PSo16NSObjectProtocol", "Value"]
 - !private ["PSo16NSObjectProtocol", "addInput"]
 - !private ["PSo16NSObjectProtocol", "addOutput"]
 - !private ["PSo16NSObjectProtocol", "addSublayer"]
@@ -782,13 +760,13 @@ depends-member:
 - ["PSo16NSObjectProtocol", "qrCodeFrameView"]
 - ["PSo16NSObjectProtocol", "ref"]
 - !private ["PSo16NSObjectProtocol", "setMetadataObjectsDelegate"]
-- !private ["PSo16NSObjectProtocol", "setValue"]
 - !private ["PSo16NSObjectProtocol", "startRunning"]
 - !private ["PSo16NSObjectProtocol", "stringValue"]
 - ["PSo16NSObjectProtocol", "supportedBarCodes"]
 - !private ["PSo16NSObjectProtocol", "transformedMetadataObjectForMetadataObject"]
 - !private ["PSo16NSObjectProtocol", "type"]
 - !private ["PSo16NSObjectProtocol", "uid"]
+- !private ["PSo16NSObjectProtocol", "updateChildValues"]
 - ["PSo16NSObjectProtocol", "userid"]
 - !private ["PSo16NSObjectProtocol", "videoGravity"]
 - ["PSo16NSObjectProtocol", "videoPreviewLayer"]
@@ -796,8 +774,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "CGColor"]
-- !private ["PSo14NSSecureCoding", "Key"]
-- !private ["PSo14NSSecureCoding", "Value"]
 - !private ["PSo14NSSecureCoding", "greenColor"]
 - ["PSs21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
@@ -1296,10 +1272,7 @@ depends-nominal:
 - "PSs16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
-- !private "CSo12NSDictionary"
 - "PSo26NSExtensionRequestHandling"
-- !private "PSo17NSFastEnumeration"
-- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
