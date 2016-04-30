@@ -7,13 +7,10 @@
 //
 
 import UIKit
-import Firebase
 
-class PlayerFoundCatViewController: UIViewController, PlayerQRCodeViewControllerDelegate {
+class PlayerFoundCatViewController: UIViewController {
     
-    var userid = ""
-    let ref = Firebase(url: "https://nekokari.firebaseio.com")
-
+   
     @IBOutlet weak var foundCatNameLabel: UILabel!
     
     @IBAction func findMoreCatsButtonDidTouch(sender: AnyObject) {
@@ -25,31 +22,13 @@ class PlayerFoundCatViewController: UIViewController, PlayerQRCodeViewController
     }
     
     override func viewDidLoad() {
-        ref.observeAuthEventWithBlock({ authData in
-            if authData != nil {
-                // user authenticated
-                self.userid = authData.uid
-                print("uid" + self.userid)
-            } else {
-                // No user is signed in
-            }
-        })
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Snowball":false, "Smokey":false, "Spots":false, "Shadow":false, "Sunny": false])
+        foundCatNameLabel.text = "You found a cat!"
     }
     
-    func foundCatName(sender: PlayerQRCodeViewController, catName: String) {
-        foundCatNameLabel.text = "You found: " + catName
-        self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue([catName:true])
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "qrToFound"{
-            let vc = segue.destinationViewController as! PlayerQRCodeViewController
-            vc.delegate = self
-        }
-    }
+
     
 }

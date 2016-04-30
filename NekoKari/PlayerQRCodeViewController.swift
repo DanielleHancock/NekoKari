@@ -8,14 +8,13 @@
 
 import UIKit
 import AVFoundation
-
-protocol PlayerQRCodeViewControllerDelegate: class {
-    func foundCatName(sender: PlayerQRCodeViewController, catName: String)
-}
+import Firebase
 
 class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    
+    var userid = ""
+    let ref = Firebase(url: "https://nekokari.firebaseio.com")
 
-    weak var delegate:PlayerQRCodeViewControllerDelegate?
     
   
     @IBAction func backToFindCatPageDidTouch(sender: AnyObject) {
@@ -35,6 +34,16 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                // user authenticated
+                self.userid = authData.uid
+                print("uid" + self.userid)
+            } else {
+                // No user is signed in
+            }
+        })
         
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
@@ -119,24 +128,24 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
             if metadataObj.stringValue != nil {
                // messageLabel.text = "Dectected"
                 if metadataObj.stringValue == "Snowball" {
-                    delegate?.foundCatName(self, catName: "Snowball")
-//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Snowball":true])
                 }
                 else if metadataObj.stringValue == "Smokey" {
-                    delegate?.foundCatName(self, catName: "Smokey")
-//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Smokey":true])
                 }
                 else if metadataObj.stringValue == "Shadow" {
-                    delegate?.foundCatName(self, catName: "Shadow")
-//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Shadow":true])
                 }
                 else if metadataObj.stringValue == "Spots" {
-                    delegate?.foundCatName(self, catName: "Spots")
-//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Spots":true])
                 }
                 else if metadataObj.stringValue == "Sunny" {
-                    delegate?.foundCatName(self, catName: "Sunny")
-//                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    performSegueWithIdentifier("qrToFoundCat", sender: self)
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Sunny":true])
 
                 }
                 
