@@ -389,22 +389,25 @@
                                     <navigationItem title="Player Screen: Found Cat" id="Bnt-9s-73P"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vc-S1-ZND">
-                                <rect key="frame" x="259" y="348" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vc-S1-ZND">
+                                <rect key="frame" x="250" y="315" width="100" height="30"/>
                                 <state key="normal" title="View Cat Book"/>
                                 <connections>
                                     <action selector="catBookButtonDidTouch:" destination="3BH-yj-Etx" eventType="touchUpInside" id="me5-JL-qr4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ml-XF-iKz">
-                                <rect key="frame" x="255" y="253" width="104" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ml-XF-iKz">
+                                <rect key="frame" x="248" y="235" width="104" height="30"/>
                                 <state key="normal" title="Find More Cats"/>
                                 <connections>
                                     <action selector="findMoreCatsButtonDidTouch:" destination="3BH-yj-Etx" eventType="touchUpInside" id="7v1-Cf-Ow9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qZ-ET-dnj">
-                                <rect key="frame" x="279" y="142" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qZ-ET-dnj">
+                                <rect key="frame" x="200" y="114" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="N0I-31-Guh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -413,10 +416,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0Q4-Mq-tRu" firstAttribute="leading" secondItem="I0C-Ah-vBh" secondAttribute="leading" id="0th-nP-yzB"/>
+                            <constraint firstItem="7Ml-XF-iKz" firstAttribute="top" secondItem="6qZ-ET-dnj" secondAttribute="bottom" constant="100" id="Ex1-h7-bSN"/>
+                            <constraint firstItem="6qZ-ET-dnj" firstAttribute="centerX" secondItem="I0C-Ah-vBh" secondAttribute="centerX" id="GYV-gl-NH3"/>
                             <constraint firstItem="0Q4-Mq-tRu" firstAttribute="top" secondItem="Mjx-tC-lMn" secondAttribute="bottom" id="LRR-c4-7bR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Ml-XF-iKz" secondAttribute="trailing" constant="21" id="MeD-KW-fId">
                                 <variation key="heightClass=regular-widthClass=compact" constant="126"/>
                             </constraint>
+                            <constraint firstItem="6Vc-S1-ZND" firstAttribute="centerX" secondItem="I0C-Ah-vBh" secondAttribute="centerX" id="QVV-so-xgL"/>
                             <constraint firstItem="0Q4-Mq-tRu" firstAttribute="leading" secondItem="I0C-Ah-vBh" secondAttribute="leading" id="WfJ-F1-gbC"/>
                             <constraint firstItem="mii-5Q-eD2" firstAttribute="top" secondItem="6Vc-S1-ZND" secondAttribute="bottom" constant="422" id="Wh2-ib-sSs">
                                 <variation key="heightClass=regular-widthClass=compact" constant="416"/>
@@ -426,7 +432,10 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="4"/>
                             </constraint>
                             <constraint firstItem="0Q4-Mq-tRu" firstAttribute="top" secondItem="Mjx-tC-lMn" secondAttribute="bottom" id="eVw-QQ-CjG"/>
+                            <constraint firstItem="6Vc-S1-ZND" firstAttribute="top" secondItem="7Ml-XF-iKz" secondAttribute="bottom" constant="50" id="elV-do-Nzk"/>
                             <constraint firstAttribute="trailing" secondItem="0Q4-Mq-tRu" secondAttribute="trailing" id="gjA-b7-Sb3"/>
+                            <constraint firstItem="7Ml-XF-iKz" firstAttribute="centerX" secondItem="I0C-Ah-vBh" secondAttribute="centerX" id="pSg-0V-2SV"/>
+                            <constraint firstItem="6qZ-ET-dnj" firstAttribute="top" secondItem="0Q4-Mq-tRu" secondAttribute="bottom" constant="50" id="xfZ-2R-12n"/>
                             <constraint firstItem="6Vc-S1-ZND" firstAttribute="top" secondItem="7Ml-XF-iKz" secondAttribute="bottom" constant="65" id="z6d-zX-0tU">
                                 <variation key="heightClass=regular-widthClass=compact" constant="102"/>
                             </constraint>
@@ -1180,7 +1189,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="k0O-Ob-gol"/>
-        <segue reference="eUK-tJ-z3X"/>
+        <segue reference="Ba2-qZ-04H"/>
         <segue reference="St8-Xy-bTj"/>
     </inferredMetricsTieBreakers>
 </document>
