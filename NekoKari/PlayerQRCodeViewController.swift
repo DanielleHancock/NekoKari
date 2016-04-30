@@ -129,23 +129,23 @@ class PlayerQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjec
                // messageLabel.text = "Dectected"
                 if metadataObj.stringValue == "Snowball" {
                     performSegueWithIdentifier("qrToFoundCat", sender: self)
-                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Snowball":true])
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).updateChildValues(["Snowball":true])
                 }
                 else if metadataObj.stringValue == "Smokey" {
                     performSegueWithIdentifier("qrToFoundCat", sender: self)
-                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Smokey":true])
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).updateChildValues(["Smokey":true])
                 }
                 else if metadataObj.stringValue == "Shadow" {
                     performSegueWithIdentifier("qrToFoundCat", sender: self)
-                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Shadow":true])
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).updateChildValues(["Shadow":true])
                 }
                 else if metadataObj.stringValue == "Spots" {
                     performSegueWithIdentifier("qrToFoundCat", sender: self)
-                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Spots":true])
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).updateChildValues(["Spots":true])
                 }
                 else if metadataObj.stringValue == "Sunny" {
                     performSegueWithIdentifier("qrToFoundCat", sender: self)
-                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).setValue(["Sunny":true])
+                    self.ref.childByAppendingPath("users").childByAppendingPath(self.userid).updateChildValues(["Sunny":true])
 
                 }
                 
